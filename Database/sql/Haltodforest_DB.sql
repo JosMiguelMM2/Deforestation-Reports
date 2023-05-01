@@ -20,61 +20,61 @@ SET row_security = off;
 -- Name: createuser(text, text, text, text, text, text, integer, text, text, text); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
-CREATE FUNCTION public.createuser(p_first_name text, p_second_name text, p_first_surname text, p_second_surname text, p_email text, p_password text, p_user_type integer, p_city_name text, p_phone_number text, p_gender_name text) RETURNS integer
-    LANGUAGE plpgsql
-    AS $$
-DECLARE
-    v_id INTEGER;
-BEGIN
-    INSERT INTO "user" (
-        "First_Name",
-        "Second_Name",
-        "First_surname",
-        "Second_surname",
-        "Email",
-        "Password",
-        "user_type",
-        "idCity",
-        "idPhone",
-        "idGender"
-    ) VALUES (
-       
-    		U."First_Name",
-    		U."Second_Name",
-    		U."First_surname",
-    		U."Second_surname",
-    		U."Email",
-    		U."Password",
-    		U."user_type",
-    		c."Name", 
-    		c."addres",
-    		p."Number",
-    		g."Category",
-		(SELECT
-		
-			U."First_Name",
-    		U."Second_Name",
-    		U."First_surname",
-    		U."Second_surname",
-    		U."Email",
-    		U."Password",
-    		U."user_type",
-    		c."Name", 
-    		c.addres,
-    		p."Number",
-    		g."Category"
-		
-			FROM "User" U
-			JOIN "City" c ON U."idCity" = c."idCity"
-			JOIN "Phone" p ON U."idPhone" = p."idPhone"
-			JOIN "Gender" g ON U."idGender" = g."idGender")
-		)RETURNING U."idUser" = v_id;
-   		 RETURN v_id;	
-END;
-$$;
+-- CREATE FUNCTION public.createuser(p_first_name text, p_second_name text, p_first_surname text, p_second_surname text, p_email text, p_password text, p_user_type integer, p_city_name text, p_phone_number text, p_gender_name text) RETURNS integer
+--     LANGUAGE plpgsql
+--     AS $$
+-- DECLARE
+--     v_id INTEGER;
+-- BEGIN
+--     INSERT INTO "user" (
+--         "First_Name",
+--         "Second_Name",
+--         "First_surname",
+--         "Second_surname",
+--         "Email",
+--         "Password",
+--         "user_type",
+--         "idCity",
+--         "idPhone",
+--         "idGender"
+--     ) VALUES (
+--
+--     		U."First_Name",
+--     		U."Second_Name",
+--     		U."First_surname",
+--     		U."Second_surname",
+--     		U."Email",
+--     		U."Password",
+--     		U."user_type",
+--     		c."Name",
+--     		c."addres",
+--     		p."Number",
+--     		g."Category",
+-- 		(SELECT
+--
+-- 			U."First_Name",
+--     		U."Second_Name",
+--     		U."First_surname",
+--     		U."Second_surname",
+--     		U."Email",
+--     		U."Password",
+--     		U."user_type",
+--     		c."Name",
+--     		c.addres,
+--     		p."Number",
+--     		g."Category"
+--
+-- 			FROM "User" U
+-- 			JOIN "City" c ON U."idCity" = c."idCity"
+-- 			JOIN "Phone" p ON U."idPhone" = p."idPhone"
+-- 			JOIN "Gender" g ON U."idGender" = g."idGender")
+-- 		)RETURNING U."idUser" = v_id;
+--    		 RETURN v_id;
+-- END;
+-- $$;
 
 
-ALTER FUNCTION public.createuser(p_first_name text, p_second_name text, p_first_surname text, p_second_surname text, p_email text, p_password text, p_user_type integer, p_city_name text, p_phone_number text, p_gender_name text) OWNER TO postgres;
+-- ALTER FUNCTION public.createuser(p_first_name text, p_second_name text, p_first_surname text, p_second_surname text, p_email text, p_password text, p_user_type integer, p_city_name text, p_phone_number text, p_gender_name text) OWNER TO postgres;
 
 SET default_tablespace = '';
 
