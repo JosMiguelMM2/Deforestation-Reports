@@ -1,4 +1,4 @@
 # Editors' folders are prevented from being uploaded
-/.idea
-/.vscode
+**/.idea/
+**/.vscode/
 /databases/SQL/.idea
