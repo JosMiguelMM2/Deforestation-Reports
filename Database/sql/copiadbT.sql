@@ -418,11 +418,47 @@ CREATE TABLE public."User" (
     user_type character varying(20) NOT NULL,
     "idCity" integer,
     "idPhone" integer,
-    "idGender" integer
+    "idGender" integer,
+    "idLocations" integer
 );
 
 
 ALTER TABLE public."User" OWNER TO postgres;
+
+--
+-- Name: UserBlogs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."UserBlogs" (
+    "idUserBlogs" integer NOT NULL,
+    "idUser" integer,
+    "IdBlogs" integer
+);
+
+
+ALTER TABLE public."UserBlogs" OWNER TO postgres;
+
+--
+-- Name: UserBlogs_idUserBlogs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public."UserBlogs_idUserBlogs_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."UserBlogs_idUserBlogs_seq" OWNER TO postgres;
+
+--
+-- Name: UserBlogs_idUserBlogs_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public."UserBlogs_idUserBlogs_seq" OWNED BY public."UserBlogs"."idUserBlogs";
+
 
 --
 -- Name: User_idUser_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -444,6 +480,44 @@ ALTER TABLE public."User_idUser_seq" OWNER TO postgres;
 --
 
 ALTER SEQUENCE public."User_idUser_seq" OWNED BY public."User"."idUser";
+
+
+--
+-- Name: blogs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.blogs (
+    "idBlogs" integer NOT NULL,
+    "Title" character varying NOT NULL,
+    content character varying NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    published boolean NOT NULL
+);
+
+
+ALTER TABLE public.blogs OWNER TO postgres;
+
+--
+-- Name: blogs_idBlogs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE public."blogs_idBlogs_seq"
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."blogs_idBlogs_seq" OWNER TO postgres;
+
+--
+-- Name: blogs_idBlogs_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE public."blogs_idBlogs_seq" OWNED BY public.blogs."idBlogs";
 
 
 --
@@ -480,6 +554,20 @@ ALTER TABLE public."entity_user_idEntityus_seq" OWNER TO postgres;
 
 ALTER SEQUENCE public."entity_user_idEntityus_seq" OWNED BY public.entity_user."idEntityus";
 
+
+--
+-- Name: locations; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public.locations (
+    latitude numeric(10,8),
+    longitude numeric(11,8),
+    "numberLocation" character varying,
+    "idLocations" integer NOT NULL
+);
+
+
+ALTER TABLE public.locations OWNER TO postgres;
 
 --
 -- Name: Affectation idAffectation; Type: DEFAULT; Schema: public; Owner: postgres
@@ -563,6 +651,20 @@ ALTER TABLE ONLY public."Report" ALTER COLUMN "idReport" SET DEFAULT nextval('pu
 --
 
 ALTER TABLE ONLY public."User" ALTER COLUMN "idUser" SET DEFAULT nextval('public."User_idUser_seq"'::regclass);
+
+
+--
+-- Name: UserBlogs idUserBlogs; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."UserBlogs" ALTER COLUMN "idUserBlogs" SET DEFAULT nextval('public."UserBlogs_idUserBlogs_seq"'::regclass);
+
+
+--
+-- Name: blogs idBlogs; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.blogs ALTER COLUMN "idBlogs" SET DEFAULT nextval('public."blogs_idBlogs_seq"'::regclass);
 
 
 --
@@ -664,7 +766,23 @@ COPY public."Report" ("idReport", "Report", "Datetime", "idDeforest", "idAffecta
 -- Data for Name: User; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Second_surname", "Email", "Password", user_type, "idCity", "idPhone", "idGender") FROM stdin;
+COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Second_surname", "Email", "Password", user_type, "idCity", "idPhone", "idGender", "idLocations") FROM stdin;
+\.
+
+
+--
+-- Data for Name: UserBlogs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."UserBlogs" ("idUserBlogs", "idUser", "IdBlogs") FROM stdin;
+\.
+
+
+--
+-- Data for Name: blogs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.blogs ("idBlogs", "Title", content, created_at, updated_at, published) FROM stdin;
 \.
 
 
@@ -673,6 +791,14 @@ COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Sec
 --
 
 COPY public.entity_user ("idEntityus", "idGoverenty", "idUser") FROM stdin;
+\.
+
+
+--
+-- Data for Name: locations; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.locations (latitude, longitude, "numberLocation", "idLocations") FROM stdin;
 \.
 
 
@@ -754,10 +880,24 @@ SELECT pg_catalog.setval('public."Report_idReport_seq"', 1, false);
 
 
 --
+-- Name: UserBlogs_idUserBlogs_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."UserBlogs_idUserBlogs_seq"', 1, false);
+
+
+--
 -- Name: User_idUser_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
 SELECT pg_catalog.setval('public."User_idUser_seq"', 1, false);
+
+
+--
+-- Name: blogs_idBlogs_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('public."blogs_idBlogs_seq"', 1, false);
 
 
 --
@@ -856,6 +996,14 @@ ALTER TABLE ONLY public."Report"
 
 
 --
+-- Name: UserBlogs UserBlogs_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."UserBlogs"
+    ADD CONSTRAINT "UserBlogs_pk" PRIMARY KEY ("idUserBlogs");
+
+
+--
 -- Name: User User_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -864,11 +1012,27 @@ ALTER TABLE ONLY public."User"
 
 
 --
+-- Name: blogs blogs_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.blogs
+    ADD CONSTRAINT blogs_pk PRIMARY KEY ("idBlogs");
+
+
+--
 -- Name: entity_user entityus_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public.entity_user
     ADD CONSTRAINT entityus_pk PRIMARY KEY ("idEntityus");
+
+
+--
+-- Name: locations locations_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public.locations
+    ADD CONSTRAINT locations_pk PRIMARY KEY ("idLocations");
 
 
 --
@@ -904,11 +1068,35 @@ ALTER TABLE ONLY public."Donations"
 
 
 --
+-- Name: UserBlogs UserBlogs_User_idUser_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."UserBlogs"
+    ADD CONSTRAINT "UserBlogs_User_idUser_fk" FOREIGN KEY ("idUser") REFERENCES public."User"("idUser");
+
+
+--
+-- Name: UserBlogs UserBlogs_blogs_idBlogs_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."UserBlogs"
+    ADD CONSTRAINT "UserBlogs_blogs_idBlogs_fk" FOREIGN KEY ("IdBlogs") REFERENCES public.blogs("idBlogs");
+
+
+--
 -- Name: Donations User__fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
 ALTER TABLE ONLY public."Donations"
     ADD CONSTRAINT "User__fk" FOREIGN KEY (iduser) REFERENCES public."User"("idUser");
+
+
+--
+-- Name: User User_locations_idLocations_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."User"
+    ADD CONSTRAINT "User_locations_idLocations_fk" FOREIGN KEY ("idLocations") REFERENCES public.locations("idLocations");
 
 
 --
