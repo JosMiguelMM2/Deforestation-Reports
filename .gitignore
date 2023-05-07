@@ -1,4 +1,10 @@
 # Editors' folders are prevented from being uploaded
 **/.idea/
 **/.vscode/
+/backend/.idea
+/backend/.vscode
+/backend/databases/SQL/.vscode
+/backend/databases/SQL/.idea
+/Database/.vscode
+/Database/.idea
 /databases/SQL/.idea
