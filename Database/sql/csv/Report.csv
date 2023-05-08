@@ -1,32 +1,32 @@
-idReport,Report,Datetime,idDeforest,idAffectation,idCity
-1,Curabitur convallis.,2016-08-10 00:00:00.000000,6,1,4
-3,"In est risus, auctor sed, tristique in, tempus sit amet, sem.",2018-04-06 00:00:00.000000,6,5,17
-4,Suspendisse potenti.,2012-11-26 00:00:00.000000,7,1,21
-5,Vestibulum rutrum rutrum neque.,2013-08-04 00:00:00.000000,8,5,1
-6,Duis ac nibh.,2019-07-06 00:00:00.000000,8,4,11
-7,Vivamus in felis eu sapien cursus vestibulum.,2014-07-31 00:00:00.000000,10,1,3
-8,"Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",2018-04-25 00:00:00.000000,9,4,14
-9,Etiam justo.,2020-03-03 00:00:00.000000,6,1,6
-10,Morbi non lectus.,2022-12-21 00:00:00.000000,7,5,8
-11,Proin at turpis a pede posuere nonummy.,2016-01-02 00:00:00.000000,9,2,1
-12,Suspendisse potenti.,2015-03-22 00:00:00.000000,8,4,13
-13,"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",2016-02-24 00:00:00.000000,9,4,10
-14,Praesent lectus.,2019-11-06 00:00:00.000000,8,6,28
-15,Fusce posuere felis sed lacus.,2019-03-07 00:00:00.000000,7,5,17
-16,Aliquam quis turpis eget elit sodales scelerisque.,2018-03-12 00:00:00.000000,4,4,21
-17,Nulla facilisi.,2021-03-14 00:00:00.000000,8,2,8
-18,Suspendisse accumsan tortor quis turpis.,2019-04-18 00:00:00.000000,10,2,28
-19,Nam tristique tortor eu pede.,2020-04-16 00:00:00.000000,8,5,18
-20,Integer ac neque.,2020-06-24 00:00:00.000000,8,3,29
-21,Duis aliquam convallis nunc.,2019-10-06 00:00:00.000000,4,1,26
-22,Donec ut dolor.,2016-05-25 00:00:00.000000,4,4,19
-23,Quisque ut erat.,2012-03-16 00:00:00.000000,9,4,23
-24,Cras in purus eu magna vulputate luctus.,2010-09-17 00:00:00.000000,8,3,21
-25,Fusce consequat.,2021-05-11 00:00:00.000000,10,5,7
-26,"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",2021-09-20 00:00:00.000000,5,4,26
-27,"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",2017-12-21 00:00:00.000000,8,5,13
-28,Duis consequat dui nec nisi volutpat eleifend.,2011-08-24 00:00:00.000000,5,6,3
-29,Sed sagittis.,2020-12-30 00:00:00.000000,6,6,7
-30,Fusce posuere felis sed lacus.,2020-06-11 00:00:00.000000,5,5,29
-31,"In est risus, auctor sed, tristique in, tempus sit amet, sem.",2014-11-21 00:00:00.000000,6,3,9
-32,"Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",2015-01-22 00:00:00.000000,5,6,26
+Report,Datetime,Name,Name,Description,Name,addres
+Donec ut dolor.,2016-05-25 00:00:00,Ganadería,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Jieshui,473 Sycamore Court
+Duis aliquam convallis nunc.,2019-10-06 00:00:00,Ganadería,Mínima,Casi ninguna afectación al medio ambiente.,Kiaranonggeng,20 Hanson Way
+Aliquam quis turpis eget elit sodales scelerisque.,2018-03-12 00:00:00,Ganadería,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Atlanta,64222 Hoffman Center
+"Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",2015-01-22 00:00:00,Petróleo y gas,Grave,Afectación grave con impacto masivo y daños irreparables al medio ambiente.,Kiaranonggeng,20 Hanson Way
+Fusce posuere felis sed lacus.,2020-06-11 00:00:00,Petróleo y gas,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Valdemarsvik,48833 Oak Valley Hill
+Duis consequat dui nec nisi volutpat eleifend.,2011-08-24 00:00:00,Petróleo y gas,Grave,Afectación grave con impacto masivo y daños irreparables al medio ambiente.,Arroio Grande,537 Fremont Terrace
+"Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",2021-09-20 00:00:00,Petróleo y gas,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Kiaranonggeng,20 Hanson Way
+"In est risus, auctor sed, tristique in, tempus sit amet, sem.",2014-11-21 00:00:00,Construcción,Moderada,Afectación moderada con posibles consecuencias a corto plazo.,Hōjō,85835 Center Crossing
+Sed sagittis.,2020-12-30 00:00:00,Construcción,Grave,Afectación grave con impacto masivo y daños irreparables al medio ambiente.,Alistráti,8 Maple Wood Circle
+Etiam justo.,2020-03-03 00:00:00,Construcción,Mínima,Casi ninguna afectación al medio ambiente.,Porkhov,290 Packers Crossing
+"In est risus, auctor sed, tristique in, tempus sit amet, sem.",2018-04-06 00:00:00,Construcción,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Puerto Nariño,5 Roxbury Trail
+Curabitur convallis.,2016-08-10 00:00:00,Construcción,Mínima,Casi ninguna afectación al medio ambiente.,Brudzeń Duży,498 Manufacturers Road
+Fusce posuere felis sed lacus.,2019-03-07 00:00:00,Mineria,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Puerto Nariño,5 Roxbury Trail
+Morbi non lectus.,2022-12-21 00:00:00,Mineria,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Wairiang,79393 Thackeray Trail
+Suspendisse potenti.,2012-11-26 00:00:00,Mineria,Mínima,Casi ninguna afectación al medio ambiente.,Atlanta,64222 Hoffman Center
+"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",2017-12-21 00:00:00,Urbanización,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Tlogotunggal,41119 Bluejay Drive
+Cras in purus eu magna vulputate luctus.,2010-09-17 00:00:00,Urbanización,Moderada,Afectación moderada con posibles consecuencias a corto plazo.,Atlanta,64222 Hoffman Center
+Integer ac neque.,2020-06-24 00:00:00,Urbanización,Moderada,Afectación moderada con posibles consecuencias a corto plazo.,Valdemarsvik,48833 Oak Valley Hill
+Nam tristique tortor eu pede.,2020-04-16 00:00:00,Urbanización,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Kabare,1 Knutson Lane
+Nulla facilisi.,2021-03-14 00:00:00,Urbanización,Baja,"Afectación leve y reversible, con impacto mínimo en los ecosistemas.",Wairiang,79393 Thackeray Trail
+Praesent lectus.,2019-11-06 00:00:00,Urbanización,Grave,Afectación grave con impacto masivo y daños irreparables al medio ambiente.,Qal‘at al Andalus,981 Caliangt Center
+Suspendisse potenti.,2015-03-22 00:00:00,Urbanización,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Tlogotunggal,41119 Bluejay Drive
+Duis ac nibh.,2019-07-06 00:00:00,Urbanización,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Sake,55 Morningstar Junction
+Vestibulum rutrum rutrum neque.,2013-08-04 00:00:00,Urbanización,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Pengilon,01973 Carpenter Circle
+Quisque ut erat.,2012-03-16 00:00:00,Tala de árboles,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Brunflo,08383 La Follette Junction
+"Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",2016-02-24 00:00:00,Tala de árboles,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,São Domingos do Maranhão,3058 Magdeline Avenue
+Proin at turpis a pede posuere nonummy.,2016-01-02 00:00:00,Tala de árboles,Baja,"Afectación leve y reversible, con impacto mínimo en los ecosistemas.",Pengilon,01973 Carpenter Circle
+"Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",2018-04-25 00:00:00,Tala de árboles,Significativa,Afectación significativa con impacto visible en los ecosistemas y en la calidad del medio ambiente.,Cunliji,887 Heath Circle
+Fusce consequat.,2021-05-11 00:00:00,Cambio climático,Alta,Afectación alta con consecuencias a largo plazo y posibles daños irreversibles.,Alistráti,8 Maple Wood Circle
+Suspendisse accumsan tortor quis turpis.,2019-04-18 00:00:00,Cambio climático,Baja,"Afectación leve y reversible, con impacto mínimo en los ecosistemas.",Qal‘at al Andalus,981 Caliangt Center
+Vivamus in felis eu sapien cursus vestibulum.,2014-07-31 00:00:00,Cambio climático,Mínima,Casi ninguna afectación al medio ambiente.,Arroio Grande,537 Fremont Terrace
