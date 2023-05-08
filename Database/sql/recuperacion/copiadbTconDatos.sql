@@ -16,6 +16,1770 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
+--
+-- Name: deleteamount(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deleteamount(p_idamount integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Amount" WHERE "idAmount" = P_idAmount;
+END;$$;
+
+
+ALTER FUNCTION public.deleteamount(p_idamount integer) OWNER TO postgres;
+
+--
+-- Name: deleteblogs(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deleteblogs(p_idblogs integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Blogs" WHERE "idBlogs" = P_idBlogs;
+END;$$;
+
+
+ALTER FUNCTION public.deleteblogs(p_idblogs integer) OWNER TO postgres;
+
+--
+-- Name: deletecity(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletecity(p_idcity integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "City" WHERE "idCity" = P_idCity;
+END;$$;
+
+
+ALTER FUNCTION public.deletecity(p_idcity integer) OWNER TO postgres;
+
+--
+-- Name: deletedeforest_type(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletedeforest_type(p_iddeforest integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Deforest_type" WHERE "idDeforest" = P_idDeforest;
+END;$$;
+
+
+ALTER FUNCTION public.deletedeforest_type(p_iddeforest integer) OWNER TO postgres;
+
+--
+-- Name: deletedonation(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletedonation(p_iddonation integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Donations" WHERE "idDonation" = P_idDonation;
+END;$$;
+
+
+ALTER FUNCTION public.deletedonation(p_iddonation integer) OWNER TO postgres;
+
+--
+-- Name: deleteentity_user(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deleteentity_user(p_identityus integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "entity_user" WHERE "idEntityus" = P_idEntityus;
+END;$$;
+
+
+ALTER FUNCTION public.deleteentity_user(p_identityus integer) OWNER TO postgres;
+
+--
+-- Name: deletefrecuency(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletefrecuency(p_idfrecuency integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Frecuency" WHERE "idFrecuency" = P_idFrecuency;
+END;$$;
+
+
+ALTER FUNCTION public.deletefrecuency(p_idfrecuency integer) OWNER TO postgres;
+
+--
+-- Name: deletegender(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletegender(p_idgender integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Gender" WHERE "idGender" = P_idGender;
+END;$$;
+
+
+ALTER FUNCTION public.deletegender(p_idgender integer) OWNER TO postgres;
+
+--
+-- Name: deletegovernment_entity(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletegovernment_entity(p_idgoverenty integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Government_entity" WHERE "idGoverenty" = P_idGoverenty;
+END;$$;
+
+
+ALTER FUNCTION public.deletegovernment_entity(p_idgoverenty integer) OWNER TO postgres;
+
+--
+-- Name: deletegradeaffectation(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletegradeaffectation(p_idaffectation integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "GradeAffectation" WHERE "idAffectation" = P_idAffectation;
+END;$$;
+
+
+ALTER FUNCTION public.deletegradeaffectation(p_idaffectation integer) OWNER TO postgres;
+
+--
+-- Name: deletelocations(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletelocations(p_idlocations integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "locations" WHERE "idlocations" = P_idlocations;
+END;$$;
+
+
+ALTER FUNCTION public.deletelocations(p_idlocations integer) OWNER TO postgres;
+
+--
+-- Name: deletepayment(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletepayment(p_idpayment integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Payment" WHERE "idPayment" = P_idPayment;
+END;$$;
+
+
+ALTER FUNCTION public.deletepayment(p_idpayment integer) OWNER TO postgres;
+
+--
+-- Name: deletephone(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletephone(p_idphone integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Phone" WHERE "idPhone" = P_idPhone;
+END;$$;
+
+
+ALTER FUNCTION public.deletephone(p_idphone integer) OWNER TO postgres;
+
+--
+-- Name: deletereport(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deletereport(p_idreport integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "Report" WHERE "idReport" = P_idReport;
+END;$$;
+
+
+ALTER FUNCTION public.deletereport(p_idreport integer) OWNER TO postgres;
+
+--
+-- Name: deleteuser(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deleteuser(p_iduser integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "User" WHERE "idUser" = P_idUser;
+END;
+$$;
+
+
+ALTER FUNCTION public.deleteuser(p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: deleteuser_type(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.deleteuser_type(p_iduser_type integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    DELETE FROM "user_type" WHERE "idUser_type" = P_idUser_type;
+END;
+$$;
+
+
+ALTER FUNCTION public.deleteuser_type(p_iduser_type integer) OWNER TO postgres;
+
+--
+-- Name: insertamount(money); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertamount(p_quantity money) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+INSERT INTO public."Amount"(
+
+	"Quantity"
+
+)VALUES (
+
+	p_Quantity
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertamount(p_quantity money) OWNER TO postgres;
+
+--
+-- Name: insertblogs(character varying, character varying, timestamp without time zone, timestamp without time zone, boolean, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertblogs(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Blogs"(
+
+	"Title",
+	"content",
+	"created_at",
+	"updated_at",
+	"published",
+	"idUser"
+
+)VALUES (
+
+	p_Title,
+	p_Content,
+	p_created_at,
+	p_update_at,
+	p_published,
+	p_idUser
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertblogs(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: insertcity(character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertcity(p_name character varying, p_addres character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."City"(
+
+	"Name",
+    "addres"
+
+)VALUES (
+
+	p_Name,
+    p_addres
+
+	);
+
+END
+$$;
+
+
+ALTER FUNCTION public.insertcity(p_name character varying, p_addres character varying) OWNER TO postgres;
+
+--
+-- Name: insertdeforest_type(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertdeforest_type(p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Deforest_type"(
+
+	"Name"
+
+)VALUES (
+
+	p_Name
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertdeforest_type(p_name character varying) OWNER TO postgres;
+
+--
+-- Name: insertdonations(character varying, integer, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertdonations(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Donations"(
+
+	"Name",
+	"iduser",
+	"idpayment",
+	"idfrecuency",
+	"idAmount"
+
+)VALUES (
+
+	p_Name,
+	p_iduser,
+	p_idpayment,
+	p_idfrecuency,
+	p_idAmount
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertdonations(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) OWNER TO postgres;
+
+--
+-- Name: insertentity_user(integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertentity_user(p_idgoverenty integer, p_iduser integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."entity_user"(
+
+	"idGoverenty",
+    "idUser"
+
+)VALUES (
+
+	p_idGoverenty,
+    p_idUser
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertentity_user(p_idgoverenty integer, p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: insertfrecuency(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertfrecuency(p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Frecuency"(
+
+	"Name"
+
+)VALUES (
+
+	p_Name
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertfrecuency(p_name character varying) OWNER TO postgres;
+
+--
+-- Name: insertgender(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertgender(p_category character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Gender"(
+
+	"Category"
+
+)VALUES (
+
+	p_Category
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertgender(p_category character varying) OWNER TO postgres;
+
+--
+-- Name: insertgovernment_entity(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertgovernment_entity(p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Government_entity"(
+
+	"Name"
+
+)VALUES (
+
+	p_Name
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertgovernment_entity(p_name character varying) OWNER TO postgres;
+
+--
+-- Name: insertgradeaffectation(character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertgradeaffectation(p_name character varying, p_description character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."GradeAffectation"(
+
+	"Name",
+	"Description"
+
+)VALUES (
+
+	p_Name,
+	p_Description
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertgradeaffectation(p_name character varying, p_description character varying) OWNER TO postgres;
+
+--
+-- Name: insertlocations(numeric, numeric, character varying, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertlocations(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."locations"(
+
+	"latitude",
+	"longitude",
+	"nameLocation",
+	"idReport"
+
+)VALUES (
+
+	p_latitude,
+    p_longitude,
+    p_nameLocation,
+    p_idReport
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertlocations(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) OWNER TO postgres;
+
+--
+-- Name: insertpayment(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertpayment(p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Payment"(
+
+	"Name"
+
+)VALUES (
+
+	p_Name
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertpayment(p_name character varying) OWNER TO postgres;
+
+--
+-- Name: insertphone(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertphone(p_number character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Phone"(
+
+	"Number"
+
+)VALUES (
+
+	p_Number
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertphone(p_number character varying) OWNER TO postgres;
+
+--
+-- Name: insertreport(character varying, timestamp without time zone, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertreport(p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."Report"(
+
+	"Report",
+	"Datetime",
+	"idDeforest",
+	"idAffectation",
+    "idCity"
+
+)VALUES (
+
+    p_Report,
+	p_Datetime,
+	p_idDeforest,
+    p_idAffectation,
+	p_idCity
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertreport(p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) OWNER TO postgres;
+
+--
+-- Name: insertuser(character varying, character varying, character varying, character varying, character varying, character varying, integer, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertuser(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."User"(
+
+	"First_Name",
+	"Second_Name",
+	"First_surname",
+	"Second_surname",
+	"Email",
+	"Password",
+	"idCity",
+	"idPhone",
+	"idGender",
+	"idUser_type"
+
+)VALUES (
+
+	p_First_Name,
+	p_Second_Name,
+	p_First_surname,
+	p_Second_surname,
+	p_Email,
+	p_Password,
+	p_idCity,
+	p_idPhone,
+	p_idGender,
+	p_idUser_type
+
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertuser(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) OWNER TO postgres;
+
+--
+-- Name: insertuser_type(character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.insertuser_type(p_type character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+INSERT INTO public."user_type"(
+
+	"Type"
+
+)VALUES (
+    p_Type
+	);
+
+END;
+$$;
+
+
+ALTER FUNCTION public.insertuser_type(p_type character varying) OWNER TO postgres;
+
+--
+-- Name: queryamount(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryamount() RETURNS TABLE(quantity money)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    amt."Quantity"
+    FROM "Amount" amt;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryamount() OWNER TO postgres;
+
+--
+-- Name: queryblogs(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryblogs() RETURNS TABLE(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_updated_at timestamp without time zone, p_published boolean, p_iduser text)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+     RETURN QUERY SELECT
+
+    B."Title" as Title,
+    B."content" as Content,
+    B."created_at" as Create_at,
+    B."updated_at" as Update_at,
+    B."published" as published_at,
+    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
+
+    FROM "Blogs" B
+    JOIN "User" u ON B."idUser" = u."idUser";
+
+
+END
+$$;
+
+
+ALTER FUNCTION public.queryblogs() OWNER TO postgres;
+
+--
+-- Name: querycity(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querycity() RETURNS TABLE(p_name character varying, p_addres character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+     RETURN QUERY SELECT
+
+    c."Name" as City,
+    c.addres as Addres
+    FROM "City" c;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.querycity() OWNER TO postgres;
+
+--
+-- Name: querydeforest_type(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querydeforest_type() RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+     RETURN QUERY SELECT
+
+    Dtyp."Name" as Type
+    FROM "Deforest_type" Dtyp;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.querydeforest_type() OWNER TO postgres;
+
+--
+-- Name: querydonations(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querydonations() RETURNS TABLE(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        D."Name" as Donationame,
+        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
+        p."Name" as paymentmethod,
+        f."Name" as frecuency,
+        a."Quantity"
+
+    FROM "Donations" D
+
+    JOIN "User" u ON D."iduser" = u."idUser"
+    JOIN "Payment" p ON D."idpayment" = p."idPayment"
+    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
+    JOIN "Amount" a ON D."idAmount" = a."idAmount";
+END
+$$;
+
+
+ALTER FUNCTION public.querydonations() OWNER TO postgres;
+
+--
+-- Name: queryentity_user(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryentity_user() RETURNS TABLE(p_idgoverenty integer, p_iduser integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    Eu."idGoverenty",
+    Eu."idUser"
+
+    FROM "entity_user" Eu;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.queryentity_user() OWNER TO postgres;
+
+--
+-- Name: queryfrecuency(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryfrecuency() RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    F."Name"
+
+    FROM "Frecuency" F;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.queryfrecuency() OWNER TO postgres;
+
+--
+-- Name: querygender(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querygender() RETURNS TABLE(p_category character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    G."Category"
+
+    FROM "Gender" G;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.querygender() OWNER TO postgres;
+
+--
+-- Name: querygovernment_entity(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querygovernment_entity() RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    Ge."Name"
+
+    FROM "Government_entity" Ge;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.querygovernment_entity() OWNER TO postgres;
+
+--
+-- Name: querygradeaffectation(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querygradeaffectation() RETURNS TABLE(p_name character varying, p_description character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    ga."Name" as grade,
+    ga."Description"
+
+    FROM "GradeAffectation" ga;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.querygradeaffectation() OWNER TO postgres;
+
+--
+-- Name: queryidamount(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidamount(p_idamount integer) RETURNS TABLE(quantity money)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    amt."Quantity"
+    FROM "Amount" amt
+    WHERE amt."idAmount" = P_idAmount;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidamount(p_idamount integer) OWNER TO postgres;
+
+--
+-- Name: queryidblogs(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidblogs(p_idblogs integer) RETURNS TABLE(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_updated_at timestamp without time zone, p_published boolean, p_iduser text)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+RETURN QUERY SELECT
+    B."Title" as Title,
+    B."content" as Content,
+    B."created_at" as Create_at,
+    B."updated_at" as Update_at,
+    B."published" as published_at,
+    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
+
+    FROM "Blogs" B
+    JOIN "User" u ON B."idUser" = u."idUser"
+    WHERE B."idBlogs" = P_idBlogs;
+
+END
+$$;
+
+
+ALTER FUNCTION public.queryidblogs(p_idblogs integer) OWNER TO postgres;
+
+--
+-- Name: queryidcity(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidcity(p_idcity integer) RETURNS TABLE(p_name character varying, p_addres character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    c."Name" as City,
+    c.addres as Addres
+    FROM "City" c
+    WHERE c."idCity" = P_idCity;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidcity(p_idcity integer) OWNER TO postgres;
+
+--
+-- Name: queryiddeforest_type(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryiddeforest_type(p_iddeforest integer) RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    Dtyp."Name" as Type
+    FROM "Deforest_type" Dtyp
+    WHERE Dtyp."idDeforest" = P_idDeforest;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryiddeforest_type(p_iddeforest integer) OWNER TO postgres;
+
+--
+-- Name: queryiddonations(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryiddonations(p_iddonation integer) RETURNS TABLE(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        D."Name" as Donationame,
+        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
+        p."Name" as paymentmethod,
+        f."Name" as frecuency,
+        a."Quantity"
+
+    FROM "Donations" D
+
+    JOIN "User" u ON D."iduser" = u."idUser"
+    JOIN "Payment" p ON D."idpayment" = p."idPayment"
+    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
+    JOIN "Amount" a ON D."idAmount" = a."idAmount"
+    WHERE D."idDonation" = P_idDonation;
+END
+$$;
+
+
+ALTER FUNCTION public.queryiddonations(p_iddonation integer) OWNER TO postgres;
+
+--
+-- Name: queryidentity_user(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidentity_user(p_identityus integer) RETURNS TABLE(p_idgoverenty integer, p_iduser integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    Eu."idGoverenty",
+    Eu."idUser"
+
+    FROM "entity_user" Eu
+    WHERE Eu."idEntityus" = P_idEntityus;
+END
+$$;
+
+
+ALTER FUNCTION public.queryidentity_user(p_identityus integer) OWNER TO postgres;
+
+--
+-- Name: queryidfrecuency(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidfrecuency(p_idfrecuency integer) RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    F."Name"
+
+    FROM "Frecuency" F
+    WHERE F."idFrecuency" = P_idFrecuency;
+END
+$$;
+
+
+ALTER FUNCTION public.queryidfrecuency(p_idfrecuency integer) OWNER TO postgres;
+
+--
+-- Name: queryidgender(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidgender(p_idgender integer) RETURNS TABLE(p_category character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    G."Category"
+
+    FROM "Gender" G
+    WHERE G."idGender" = P_idGender;
+END
+$$;
+
+
+ALTER FUNCTION public.queryidgender(p_idgender integer) OWNER TO postgres;
+
+--
+-- Name: queryidgovernment_entity(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidgovernment_entity(p_idgoverenty integer) RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    Ge."Name"
+
+    FROM "Government_entity" Ge
+    WHERE Ge."idGoverenty" = P_idGoverenty;
+END
+$$;
+
+
+ALTER FUNCTION public.queryidgovernment_entity(p_idgoverenty integer) OWNER TO postgres;
+
+--
+-- Name: queryidgradeaffectation(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidgradeaffectation(p_idaffectation integer) RETURNS TABLE(p_name character varying, p_description character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    ga."Name" as grade,
+    ga."Description"
+
+    FROM "GradeAffectation" ga
+
+    WHERE ga."idAffectation" = P_idAffectation;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidgradeaffectation(p_idaffectation integer) OWNER TO postgres;
+
+--
+-- Name: queryidlocations(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidlocations(p_idlocations integer) RETURNS TABLE(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        L."latitude",
+        L."longitude",
+        L."nameLocation",
+        R."Report"
+
+    FROM "locations" L
+    JOIN "Report" R ON L."idReport" = R."idReport"
+    WHERE L."idlocations" = P_idlocations;
+END
+$$;
+
+
+ALTER FUNCTION public.queryidlocations(p_idlocations integer) OWNER TO postgres;
+
+--
+-- Name: queryidpayment(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidpayment(p_idpayment integer) RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    Py."Name" as payment_method
+    FROM "Payment" Py
+    WHERE Py."idPayment" = P_idPayment;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidpayment(p_idpayment integer) OWNER TO postgres;
+
+--
+-- Name: queryidphone(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidphone(p_idphone integer) RETURNS TABLE(p_number character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    P."Number"
+
+    FROM "Phone" P
+    WHERE P."idPhone" = P_idPhone;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidphone(p_idphone integer) OWNER TO postgres;
+
+--
+-- Name: queryidreport(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryidreport(p_idreport integer) RETURNS TABLE(p_report character varying, p_datetime timestamp without time zone, p_deforest character varying, p_affectation character varying, p_description character varying, p_city character varying, p_addres character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        R."Report",
+        R."Datetime",
+        Dt."Name" as Type,
+        ga."Name" as Grade,
+        ga."Description",
+        c."Name" as City,
+        c.addres as Addres
+
+    FROM "Report" R
+    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
+    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
+    JOIN "City" c ON R."idCity" = c."idCity"
+
+    WHERE R."idReport" = P_idReport;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryidreport(p_idreport integer) OWNER TO postgres;
+
+--
+-- Name: queryiduser(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryiduser(p_iduser integer) RETURNS TABLE(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_city character varying, p_address character varying, p_phone character varying, p_gender character varying, p_user_type character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        U."First_Name",
+        U."Second_Name",
+        U."First_surname",
+        U."Second_surname",
+        U."Email",
+        U."Password",
+        c."Name" as City,
+        c.addres as Addres,
+        p."Number" as Phone,
+        g."Category" as Gender,
+        utyp."Type" as Type
+    FROM "User" U
+    JOIN "City" c ON U."idCity" = c."idCity"
+    JOIN "Phone" p ON U."idPhone" = p."idPhone"
+    JOIN "Gender" g ON U."idGender" = g."idGender"
+    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type"
+    WHERE U."idUser" = P_idUser;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryiduser(p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: queryiduser_type(integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryiduser_type(p_iduser_type integer) RETURNS TABLE(p_type character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+        Utyp."Type"
+
+    FROM "user_type" Utyp
+    WHERE Utyp."idUser_type" = P_idUser_type;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryiduser_type(p_iduser_type integer) OWNER TO postgres;
+
+--
+-- Name: querylocations(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querylocations() RETURNS TABLE(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        L."latitude",
+        L."longitude",
+        L."nameLocation",
+        R."Report"
+
+    FROM "locations" L
+    JOIN "Report" R ON L."idReport" = R."idReport";
+END
+$$;
+
+
+ALTER FUNCTION public.querylocations() OWNER TO postgres;
+
+--
+-- Name: querypayment(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.querypayment() RETURNS TABLE(p_name character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+
+    Py."Name" as payment_method
+    FROM "Payment" Py;
+END;
+$$;
+
+
+ALTER FUNCTION public.querypayment() OWNER TO postgres;
+
+--
+-- Name: queryphone(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryphone() RETURNS TABLE(p_number character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+    P."Number"
+
+    FROM "Phone" P;
+END;
+$$;
+
+
+ALTER FUNCTION public.queryphone() OWNER TO postgres;
+
+--
+-- Name: queryreport(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryreport() RETURNS TABLE(p_report character varying, p_datetime timestamp without time zone, p_deforest character varying, p_affectation character varying, p_description character varying, p_city character varying, p_addres character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+    RETURN QUERY SELECT
+        R."Report",
+        R."Datetime",
+        Dt."Name" as Type,
+        ga."Name" as Grade,
+        ga."Description",
+        c."Name" as City,
+        c.addres as Addres
+
+    FROM "Report" R
+    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
+    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
+    JOIN "City" c ON R."idCity" = c."idCity";
+
+END;
+$$;
+
+
+ALTER FUNCTION public.queryreport() OWNER TO postgres;
+
+--
+-- Name: queryuser(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryuser() RETURNS TABLE(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_city character varying, p_address character varying, p_phone character varying, p_gender character varying, p_user_type character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+     RETURN QUERY SELECT
+        U."First_Name",
+        U."Second_Name",
+        U."First_surname",
+        U."Second_surname",
+        U."Email",
+        U."Password",
+        c."Name" as City,
+        c.addres as Addres,
+        p."Number" as Phone,
+        g."Category" as Gender,
+        utyp."Type" as Type
+    FROM "User" U
+    JOIN "City" c ON U."idCity" = c."idCity"
+    JOIN "Phone" p ON U."idPhone" = p."idPhone"
+    JOIN "Gender" g ON U."idGender" = g."idGender"
+    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type";
+
+END;
+$$;
+
+
+ALTER FUNCTION public.queryuser() OWNER TO postgres;
+
+--
+-- Name: queryuser_type(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.queryuser_type() RETURNS TABLE(p_type character varying)
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+     RETURN QUERY SELECT
+
+        Utyp."Type"
+
+        FROM "user_type" Utyp;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.queryuser_type() OWNER TO postgres;
+
+--
+-- Name: updateamount(integer, money); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updateamount(p_idamount integer, p_quantity money) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Amount" SET
+
+	"Quantity" = p_Quantity
+
+	WHERE "idAmount" = P_idAmount;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updateamount(p_idamount integer, p_quantity money) OWNER TO postgres;
+
+--
+-- Name: updateblogs(integer, character varying, character varying, timestamp without time zone, timestamp without time zone, boolean, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updateblogs(p_idblogs integer, p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Blogs" SET
+
+	"Title" = p_Title,
+	"content" = p_Content,
+	"created_at" = p_created_at,
+	"updated_at" = p_update_at,
+	"published" = p_published,
+	"idUser" = p_idUser
+
+	WHERE "idBlogs" = P_idBlogs;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updateblogs(p_idblogs integer, p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: updatecity(integer, character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatecity(p_idcity integer, p_name character varying, p_addres character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."City" SET
+
+	"Name" = p_Name,
+    "addres" = p_addres
+
+	WHERE "idCity" = P_idCity;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatecity(p_idcity integer, p_name character varying, p_addres character varying) OWNER TO postgres;
+
+--
+-- Name: updatedeforest_type(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatedeforest_type(p_iddeforest integer, p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Deforest_type" SET
+
+	"Name" = p_Name
+
+	WHERE "idDeforest" = P_idDeforest;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatedeforest_type(p_iddeforest integer, p_name character varying) OWNER TO postgres;
+
+--
+-- Name: updatedonations(integer, character varying, integer, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatedonations(p_iddonation integer, p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Donations" SET
+
+	"Name" = p_Name,
+	"iduser" = p_iduser,
+	"idpayment" = p_idpayment,
+	"idfrecuency" = p_idfrecuency,
+	"idAmount" = p_idAmount
+
+	WHERE "idDonation" = P_idDonation;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatedonations(p_iddonation integer, p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) OWNER TO postgres;
+
+--
+-- Name: updateentity_user(integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updateentity_user(p_identityus integer, p_idgoverenty integer, p_iduser integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."entity_user" SET
+
+	"idGoverenty" = p_idGoverenty,
+	"idUser" = p_idUser
+
+	WHERE "idEntityus" = P_idEntityus;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updateentity_user(p_identityus integer, p_idgoverenty integer, p_iduser integer) OWNER TO postgres;
+
+--
+-- Name: updatefrecuency(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatefrecuency(p_idfrecuency integer, p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Frecuency" SET
+
+	"Name" = p_Name
+
+	WHERE "idFrecuency" = P_idFrecuency;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatefrecuency(p_idfrecuency integer, p_name character varying) OWNER TO postgres;
+
+--
+-- Name: updategender(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updategender(p_idgender integer, p_category character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Gender" SET
+
+	"Category" = p_Category
+
+	WHERE "idGender" = P_idGender;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updategender(p_idgender integer, p_category character varying) OWNER TO postgres;
+
+--
+-- Name: updategovernment_entity(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updategovernment_entity(p_idgoverenty integer, p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Government_entity" SET
+
+	"Name" = p_Name
+
+	WHERE "idGoverenty" = P_idGoverenty;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updategovernment_entity(p_idgoverenty integer, p_name character varying) OWNER TO postgres;
+
+--
+-- Name: updategradeaffectation(integer, character varying, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updategradeaffectation(p_idaffectation integer, p_name character varying, p_description character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."GradeAffectation" SET
+
+	"Name" = p_Name,
+	"Description" = p_Description
+
+	WHERE "idAffectation" = P_idAffectation;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updategradeaffectation(p_idaffectation integer, p_name character varying, p_description character varying) OWNER TO postgres;
+
+--
+-- Name: updatelocations(integer, numeric, numeric, character varying, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatelocations(p_idlocations integer, p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."locations" SET
+
+	"latitude" =  p_latitude ,
+	"longitude" = p_longitude,
+	"nameLocation" = p_nameLocation,
+	"idReport" = p_idReport
+
+	WHERE "idlocations" = P_idlocations;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatelocations(p_idlocations integer, p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) OWNER TO postgres;
+
+--
+-- Name: updatepayment(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatepayment(p_idpayment integer, p_name character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Payment" SET
+
+	"Name" = p_Name
+    WHERE "idPayment"= P_idPayment;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatepayment(p_idpayment integer, p_name character varying) OWNER TO postgres;
+
+--
+-- Name: updatephone(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatephone(p_idphone integer, p_number character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+UPDATE public."Phone" SET
+
+	"Number" = p_Number
+    WHERE "idPhone" = p_idPhone;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatephone(p_idphone integer, p_number character varying) OWNER TO postgres;
+
+--
+-- Name: updatereport(integer, character varying, timestamp without time zone, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updatereport(p_idreport integer, p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."Report" SET
+
+    "Report" = p_Report,
+    "Datetime"= p_Datetime,
+    "idDeforest"= p_idDeforest,
+    "idAffectation" = p_idAffectation,
+	"idCity" = p_idCity
+
+	WHERE "idReport" = P_idReport;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updatereport(p_idreport integer, p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) OWNER TO postgres;
+
+--
+-- Name: updateuser(integer, character varying, character varying, character varying, character varying, character varying, character varying, integer, integer, integer, integer); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updateuser(p_iduser integer, p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+
+UPDATE public."User" SET
+
+	"First_Name" = p_First_Name,
+	"Second_Name" = p_Second_Name,
+	"First_surname" = p_First_surname,
+	"Second_surname" = p_Second_surname,
+	"Email" = p_Email,
+	"Password" = p_Password,
+	"idCity" = p_idCity,
+	"idPhone" = p_idPhone,
+	"idGender" = p_idGender,
+	"idUser_type" = p_idUser_type
+
+	WHERE "idUser" = P_idUser;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updateuser(p_iduser integer, p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) OWNER TO postgres;
+
+--
+-- Name: updateuser_type(integer, character varying); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION public.updateuser_type(p_iduser_type integer, p_type character varying) RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+BEGIN
+
+UPDATE public."user_type" SET
+
+	"Type" = p_Type
+
+	WHERE "idUser_type" = P_idUser_type;
+
+END;
+$$;
+
+
+ALTER FUNCTION public.updateuser_type(p_iduser_type integer, p_type character varying) OWNER TO postgres;
+
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -88,6 +1852,23 @@ ALTER TABLE public."Amount_idAmount_seq" OWNER TO postgres;
 
 ALTER SEQUENCE public."Amount_idAmount_seq" OWNED BY public."Amount"."idAmount";
 
+
+--
+-- Name: Blogs; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."Blogs" (
+    "idBlogs" integer NOT NULL,
+    "Title" character varying NOT NULL,
+    content character varying NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    published boolean NOT NULL,
+    "idUser" integer
+);
+
+
+ALTER TABLE public."Blogs" OWNER TO postgres;
 
 --
 -- Name: City; Type: TABLE; Schema: public; Owner: postgres
@@ -448,23 +2229,6 @@ ALTER SEQUENCE public."User_idUser_seq" OWNED BY public."User"."idUser";
 
 
 --
--- Name: blogs; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public.blogs (
-    "idBlogs" integer NOT NULL,
-    "Title" character varying NOT NULL,
-    content character varying NOT NULL,
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
-    published boolean NOT NULL,
-    "idUser" integer
-);
-
-
-ALTER TABLE public.blogs OWNER TO postgres;
-
---
 -- Name: blogs_idBlogs_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -483,7 +2247,7 @@ ALTER TABLE public."blogs_idBlogs_seq" OWNER TO postgres;
 -- Name: blogs_idBlogs_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
-ALTER SEQUENCE public."blogs_idBlogs_seq" OWNED BY public.blogs."idBlogs";
+ALTER SEQUENCE public."blogs_idBlogs_seq" OWNED BY public."Blogs"."idBlogs";
 
 
 --
@@ -600,6 +2364,13 @@ ALTER TABLE ONLY public."Amount" ALTER COLUMN "idAmount" SET DEFAULT nextval('pu
 
 
 --
+-- Name: Blogs idBlogs; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."Blogs" ALTER COLUMN "idBlogs" SET DEFAULT nextval('public."blogs_idBlogs_seq"'::regclass);
+
+
+--
 -- Name: City idCity; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -677,13 +2448,6 @@ ALTER TABLE ONLY public."User" ALTER COLUMN "idUser" SET DEFAULT nextval('public
 
 
 --
--- Name: blogs idBlogs; Type: DEFAULT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public.blogs ALTER COLUMN "idBlogs" SET DEFAULT nextval('public."blogs_idBlogs_seq"'::regclass);
-
-
---
 -- Name: entity_user idEntityus; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -739,6 +2503,44 @@ COPY public."Amount" ("idAmount", "Quantity") FROM stdin;
 28	$ 265,00
 29	$ 643,00
 30	$ 625,00
+\.
+
+
+--
+-- Data for Name: Blogs; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."Blogs" ("idBlogs", "Title", content, created_at, updated_at, published, "idUser") FROM stdin;
+31	Research Associate	Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.	2022-04-22 00:00:00	2021-08-29 00:00:00	t	4
+32	Statistician I	In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.	2013-08-18 00:00:00	2013-02-23 00:00:00	f	9
+33	Structural Analysis Engineer	Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.	2012-07-11 00:00:00	2018-11-05 00:00:00	t	12
+34	Business Systems Development Analyst	Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.	2013-10-12 00:00:00	2012-02-09 00:00:00	t	30
+35	Business Systems Development Analyst	In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.	2011-05-25 00:00:00	2023-02-02 00:00:00	t	14
+36	Senior Editor	In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.	2017-03-17 00:00:00	2016-12-02 00:00:00	t	7
+37	Senior Financial Analyst	Aliquam non mauris.	2019-07-04 00:00:00	2011-03-19 00:00:00	f	7
+38	Budget/Accounting Analyst I	Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.	2021-05-21 00:00:00	2018-03-26 00:00:00	t	19
+39	Office Assistant I	In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.	2020-12-25 00:00:00	2021-06-17 00:00:00	t	1
+40	Research Nurse	Maecenas pulvinar lobortis est. Phasellus sit amet erat.	2017-12-11 00:00:00	2019-10-02 00:00:00	t	5
+41	Senior Cost Accountant	Suspendisse potenti.	2010-06-09 00:00:00	2017-01-10 00:00:00	f	25
+42	Business Systems Development Analyst	Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.	2016-02-18 00:00:00	2017-08-12 00:00:00	t	15
+43	Research Assistant IV	Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.	2017-10-01 00:00:00	2011-11-07 00:00:00	f	27
+44	Assistant Professor	Curabitur convallis.	2020-10-31 00:00:00	2017-08-20 00:00:00	t	15
+45	Structural Analysis Engineer	Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.	2011-10-08 00:00:00	2019-01-05 00:00:00	t	6
+46	Community Outreach Specialist	Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.	2016-03-25 00:00:00	2013-01-01 00:00:00	f	15
+47	Tax Accountant	Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.	2021-04-11 00:00:00	2010-12-07 00:00:00	f	29
+48	Project Manager	Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.	2016-06-26 00:00:00	2018-04-30 00:00:00	f	26
+49	VP Quality Control	Donec semper sapien a libero.	2020-04-21 00:00:00	2013-09-15 00:00:00	t	3
+50	Pharmacist	Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.	2019-10-02 00:00:00	2013-09-16 00:00:00	t	7
+51	Project Manager	Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.	2014-01-01 00:00:00	2020-12-13 00:00:00	f	8
+52	Nuclear Power Engineer	Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.	2017-01-25 00:00:00	2013-08-09 00:00:00	t	5
+53	Senior Financial Analyst	Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.	2014-04-18 00:00:00	2021-04-12 00:00:00	t	9
+54	Assistant Professor	Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.	2015-09-29 00:00:00	2023-01-10 00:00:00	t	8
+55	Sales Associate	In hac habitasse platea dictumst.	2018-11-16 00:00:00	2016-12-02 00:00:00	t	2
+56	Financial Advisor	Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.	2014-12-20 00:00:00	2011-01-08 00:00:00	f	5
+57	Internal Auditor	Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.	2013-12-02 00:00:00	2020-03-14 00:00:00	f	10
+58	GIS Technical Architect	Etiam justo. Etiam pretium iaculis justo.	2019-07-28 00:00:00	2023-04-02 00:00:00	f	27
+59	Community Outreach Specialist	Quisque porta volutpat erat.	2020-02-29 00:00:00	2022-04-15 00:00:00	f	28
+60	Professor	Pellentesque ultrices mattis odio.	2011-02-12 00:00:00	2021-03-13 00:00:00	t	20
 \.
 
 
@@ -1012,44 +2814,6 @@ COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Sec
 
 
 --
--- Data for Name: blogs; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.blogs ("idBlogs", "Title", content, created_at, updated_at, published, "idUser") FROM stdin;
-31	Research Associate	Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.	2022-04-22 00:00:00	2021-08-29 00:00:00	t	4
-32	Statistician I	In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.	2013-08-18 00:00:00	2013-02-23 00:00:00	f	9
-33	Structural Analysis Engineer	Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.	2012-07-11 00:00:00	2018-11-05 00:00:00	t	12
-34	Business Systems Development Analyst	Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.	2013-10-12 00:00:00	2012-02-09 00:00:00	t	30
-35	Business Systems Development Analyst	In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.	2011-05-25 00:00:00	2023-02-02 00:00:00	t	14
-36	Senior Editor	In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.	2017-03-17 00:00:00	2016-12-02 00:00:00	t	7
-37	Senior Financial Analyst	Aliquam non mauris.	2019-07-04 00:00:00	2011-03-19 00:00:00	f	7
-38	Budget/Accounting Analyst I	Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.	2021-05-21 00:00:00	2018-03-26 00:00:00	t	19
-39	Office Assistant I	In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.	2020-12-25 00:00:00	2021-06-17 00:00:00	t	1
-40	Research Nurse	Maecenas pulvinar lobortis est. Phasellus sit amet erat.	2017-12-11 00:00:00	2019-10-02 00:00:00	t	5
-41	Senior Cost Accountant	Suspendisse potenti.	2010-06-09 00:00:00	2017-01-10 00:00:00	f	25
-42	Business Systems Development Analyst	Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.	2016-02-18 00:00:00	2017-08-12 00:00:00	t	15
-43	Research Assistant IV	Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.	2017-10-01 00:00:00	2011-11-07 00:00:00	f	27
-44	Assistant Professor	Curabitur convallis.	2020-10-31 00:00:00	2017-08-20 00:00:00	t	15
-45	Structural Analysis Engineer	Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.	2011-10-08 00:00:00	2019-01-05 00:00:00	t	6
-46	Community Outreach Specialist	Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.	2016-03-25 00:00:00	2013-01-01 00:00:00	f	15
-47	Tax Accountant	Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.	2021-04-11 00:00:00	2010-12-07 00:00:00	f	29
-48	Project Manager	Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.	2016-06-26 00:00:00	2018-04-30 00:00:00	f	26
-49	VP Quality Control	Donec semper sapien a libero.	2020-04-21 00:00:00	2013-09-15 00:00:00	t	3
-50	Pharmacist	Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.	2019-10-02 00:00:00	2013-09-16 00:00:00	t	7
-51	Project Manager	Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.	2014-01-01 00:00:00	2020-12-13 00:00:00	f	8
-52	Nuclear Power Engineer	Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.	2017-01-25 00:00:00	2013-08-09 00:00:00	t	5
-53	Senior Financial Analyst	Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.	2014-04-18 00:00:00	2021-04-12 00:00:00	t	9
-54	Assistant Professor	Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.	2015-09-29 00:00:00	2023-01-10 00:00:00	t	8
-55	Sales Associate	In hac habitasse platea dictumst.	2018-11-16 00:00:00	2016-12-02 00:00:00	t	2
-56	Financial Advisor	Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.	2014-12-20 00:00:00	2011-01-08 00:00:00	f	5
-57	Internal Auditor	Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.	2013-12-02 00:00:00	2020-03-14 00:00:00	f	10
-58	GIS Technical Architect	Etiam justo. Etiam pretium iaculis justo.	2019-07-28 00:00:00	2023-04-02 00:00:00	f	27
-59	Community Outreach Specialist	Quisque porta volutpat erat.	2020-02-29 00:00:00	2022-04-15 00:00:00	f	28
-60	Professor	Pellentesque ultrices mattis odio.	2011-02-12 00:00:00	2021-03-13 00:00:00	t	20
-\.
-
-
---
 -- Data for Name: entity_user; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -1204,7 +2968,7 @@ SELECT pg_catalog.setval('public."Report_idReport_seq"', 32, true);
 -- Name: User_idUser_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public."User_idUser_seq"', 30, true);
+SELECT pg_catalog.setval('public."User_idUser_seq"', 31, true);
 
 
 --
@@ -1332,10 +3096,10 @@ ALTER TABLE ONLY public."User"
 
 
 --
--- Name: blogs blogs_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Blogs blogs_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.blogs
+ALTER TABLE ONLY public."Blogs"
     ADD CONSTRAINT blogs_pk PRIMARY KEY ("idBlogs");
 
 
@@ -1412,10 +3176,10 @@ ALTER TABLE ONLY public."User"
 
 
 --
--- Name: blogs blogs_User_idUser_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: Blogs blogs_User_idUser_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
-ALTER TABLE ONLY public.blogs
+ALTER TABLE ONLY public."Blogs"
     ADD CONSTRAINT "blogs_User_idUser_fk" FOREIGN KEY ("idUser") REFERENCES public."User"("idUser");
 
 
