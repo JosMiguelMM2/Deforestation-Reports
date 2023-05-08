@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
-import { CorsModule } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+import * as Joi from 'joi';
+
+
 @Module({
-  imports: [CorsModule],
+  imports: [],
   controllers: [AppController],
   providers: [AppService],
 })
