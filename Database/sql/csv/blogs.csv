@@ -1,31 +1,31 @@
-idBlogs,Title,content,created_at,updated_at,published,idUser
-31,Research Associate,"Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",2022-04-22 00:00:00.000000,2021-08-29 00:00:00.000000,true,4
-32,Statistician I,"In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",2013-08-18 00:00:00.000000,2013-02-23 00:00:00.000000,false,9
-33,Structural Analysis Engineer,"Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",2012-07-11 00:00:00.000000,2018-11-05 00:00:00.000000,true,12
-34,Business Systems Development Analyst,"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",2013-10-12 00:00:00.000000,2012-02-09 00:00:00.000000,true,30
-35,Business Systems Development Analyst,In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.,2011-05-25 00:00:00.000000,2023-02-02 00:00:00.000000,true,14
-36,Senior Editor,"In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",2017-03-17 00:00:00.000000,2016-12-02 00:00:00.000000,true,7
-37,Senior Financial Analyst,Aliquam non mauris.,2019-07-04 00:00:00.000000,2011-03-19 00:00:00.000000,false,7
-38,Budget/Accounting Analyst I,Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.,2021-05-21 00:00:00.000000,2018-03-26 00:00:00.000000,true,19
-39,Office Assistant I,In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.,2020-12-25 00:00:00.000000,2021-06-17 00:00:00.000000,true,1
-40,Research Nurse,Maecenas pulvinar lobortis est. Phasellus sit amet erat.,2017-12-11 00:00:00.000000,2019-10-02 00:00:00.000000,true,5
-41,Senior Cost Accountant,Suspendisse potenti.,2010-06-09 00:00:00.000000,2017-01-10 00:00:00.000000,false,25
-42,Business Systems Development Analyst,"Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",2016-02-18 00:00:00.000000,2017-08-12 00:00:00.000000,true,15
-43,Research Assistant IV,Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.,2017-10-01 00:00:00.000000,2011-11-07 00:00:00.000000,false,27
-44,Assistant Professor,Curabitur convallis.,2020-10-31 00:00:00.000000,2017-08-20 00:00:00.000000,true,15
-45,Structural Analysis Engineer,Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.,2011-10-08 00:00:00.000000,2019-01-05 00:00:00.000000,true,6
-46,Community Outreach Specialist,Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.,2016-03-25 00:00:00.000000,2013-01-01 00:00:00.000000,false,15
-47,Tax Accountant,Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.,2021-04-11 00:00:00.000000,2010-12-07 00:00:00.000000,false,29
-48,Project Manager,"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",2016-06-26 00:00:00.000000,2018-04-30 00:00:00.000000,false,26
-49,VP Quality Control,Donec semper sapien a libero.,2020-04-21 00:00:00.000000,2013-09-15 00:00:00.000000,true,3
-50,Pharmacist,"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",2019-10-02 00:00:00.000000,2013-09-16 00:00:00.000000,true,7
-51,Project Manager,"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",2014-01-01 00:00:00.000000,2020-12-13 00:00:00.000000,false,8
-52,Nuclear Power Engineer,"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",2017-01-25 00:00:00.000000,2013-08-09 00:00:00.000000,true,5
-53,Senior Financial Analyst,"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",2014-04-18 00:00:00.000000,2021-04-12 00:00:00.000000,true,9
-54,Assistant Professor,"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.",2015-09-29 00:00:00.000000,2023-01-10 00:00:00.000000,true,8
-55,Sales Associate,In hac habitasse platea dictumst.,2018-11-16 00:00:00.000000,2016-12-02 00:00:00.000000,true,2
-56,Financial Advisor,Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.,2014-12-20 00:00:00.000000,2011-01-08 00:00:00.000000,false,5
-57,Internal Auditor,"Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",2013-12-02 00:00:00.000000,2020-03-14 00:00:00.000000,false,10
-58,GIS Technical Architect,Etiam justo. Etiam pretium iaculis justo.,2019-07-28 00:00:00.000000,2023-04-02 00:00:00.000000,false,27
-59,Community Outreach Specialist,Quisque porta volutpat erat.,2020-02-29 00:00:00.000000,2022-04-15 00:00:00.000000,false,28
-60,Professor,Pellentesque ultrices mattis odio.,2011-02-12 00:00:00.000000,2021-03-13 00:00:00.000000,true,20
+p_title,p_content,p_created_at,p_updated_at,p_published,p_iduser
+Research Associate,"Duis at velit eu est congue elementum. In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",2022-04-22 00:00:00,2021-08-29 00:00:00,t,Irita Taddeo Irita Doone
+Statistician I,"In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum.",2013-08-18 00:00:00,2013-02-23 00:00:00,f,Kerry Filberte Kerry Chooter
+Structural Analysis Engineer,"Pellentesque ultrices mattis odio. Donec vitae nisi. Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.",2012-07-11 00:00:00,2018-11-05 00:00:00,t,Caressa Caralie Caressa Readie
+Business Systems Development Analyst,"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",2013-10-12 00:00:00,2012-02-09 00:00:00,t,Andres Courtnay Andres Borgars
+Business Systems Development Analyst,In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.,2011-05-25 00:00:00,2023-02-02 00:00:00,t,Fionna Christi Fionna Lapidus
+Senior Editor,"In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",2017-03-17 00:00:00,2016-12-02 00:00:00,t,Maddi Amandie Maddi Ehrat
+Senior Financial Analyst,Aliquam non mauris.,2019-07-04 00:00:00,2011-03-19 00:00:00,f,Maddi Amandie Maddi Ehrat
+Budget/Accounting Analyst I,Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.,2021-05-21 00:00:00,2018-03-26 00:00:00,t,Skipp Evered Skipp Lusher
+Office Assistant I,In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.,2020-12-25 00:00:00,2021-06-17 00:00:00,t,Giordano Earl Giordano Tomasian
+Research Nurse,Maecenas pulvinar lobortis est. Phasellus sit amet erat.,2017-12-11 00:00:00,2019-10-02 00:00:00,t,Fields Talbert Fields Blackborough
+Senior Cost Accountant,Suspendisse potenti.,2010-06-09 00:00:00,2017-01-10 00:00:00,f,Juline Gale Juline Bruin
+Business Systems Development Analyst,"Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",2016-02-18 00:00:00,2017-08-12 00:00:00,t,Bobine Inge Bobine MacIlhagga
+Research Assistant IV,Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum.,2017-10-01 00:00:00,2011-11-07 00:00:00,f,Hort Valeria Hort Yitzowitz
+Assistant Professor,Curabitur convallis.,2020-10-31 00:00:00,2017-08-20 00:00:00,t,Bobine Inge Bobine MacIlhagga
+Structural Analysis Engineer,Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.,2011-10-08 00:00:00,2019-01-05 00:00:00,t,Joyann Melisenda Joyann Dunbleton
+Community Outreach Specialist,Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.,2016-03-25 00:00:00,2013-01-01 00:00:00,f,Bobine Inge Bobine MacIlhagga
+Tax Accountant,Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.,2021-04-11 00:00:00,2010-12-07 00:00:00,f,Lani Sada Lani Corton
+Project Manager,"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo.",2016-06-26 00:00:00,2018-04-30 00:00:00,f,Jorge Rollin Jorge Cejka
+VP Quality Control,Donec semper sapien a libero.,2020-04-21 00:00:00,2013-09-15 00:00:00,t,Hewet Yankee Hewet Evelyn
+Pharmacist,"Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",2019-10-02 00:00:00,2013-09-16 00:00:00,t,Maddi Amandie Maddi Ehrat
+Project Manager,"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",2014-01-01 00:00:00,2020-12-13 00:00:00,f,Flem Earl Flem Harroll
+Nuclear Power Engineer,"Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",2017-01-25 00:00:00,2013-08-09 00:00:00,t,Fields Talbert Fields Blackborough
+Senior Financial Analyst,"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci.",2014-04-18 00:00:00,2021-04-12 00:00:00,t,Kerry Filberte Kerry Chooter
+Assistant Professor,"Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim.",2015-09-29 00:00:00,2023-01-10 00:00:00,t,Flem Earl Flem Harroll
+Sales Associate,In hac habitasse platea dictumst.,2018-11-16 00:00:00,2016-12-02 00:00:00,t,Row Alexei Row Cringle
+Financial Advisor,Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.,2014-12-20 00:00:00,2011-01-08 00:00:00,f,Fields Talbert Fields Blackborough
+Internal Auditor,"Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",2013-12-02 00:00:00,2020-03-14 00:00:00,f,Jessie Cathee Jessie Sadgrove
+GIS Technical Architect,Etiam justo. Etiam pretium iaculis justo.,2019-07-28 00:00:00,2023-04-02 00:00:00,f,Hort Valeria Hort Yitzowitz
+Community Outreach Specialist,Quisque porta volutpat erat.,2020-02-29 00:00:00,2022-04-15 00:00:00,f,Ariella Camel Ariella Parram
+Professor,Pellentesque ultrices mattis odio.,2011-02-12 00:00:00,2021-03-13 00:00:00,t,Fran Gladi Fran Jervois

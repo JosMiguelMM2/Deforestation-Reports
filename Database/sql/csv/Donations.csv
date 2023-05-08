@@ -1,31 +1,31 @@
-idDonation,Name,iduser,idpayment,idfrecuency,idAmount
-1,Jaimie Chismon,21,3,3,12
-2,Whitman Hebblewhite,19,1,1,25
-3,Conant Treherne,5,1,1,21
-4,Averil Ascraft,10,2,1,10
-5,Giulia Farmer,23,2,4,7
-6,Jarvis D'Alesco,13,3,3,4
-7,Loella Crystal,15,3,1,17
-8,Phillipe Garard,13,3,2,25
-9,Robb Timewell,14,1,1,16
-10,Sydney Duckering,14,3,3,4
-11,Stefania Dunnet,9,3,4,4
-12,Elfrieda McClounan,26,2,3,2
-13,Enos Costy,2,3,2,20
-14,Charmine Banane,11,2,2,3
-15,Corella Jugging,1,3,4,28
-16,Flint Meddings,10,3,4,15
-17,Sam MacIlurick,14,2,3,17
-18,Gilbertine Hartington,27,2,4,25
-19,Ab Yegorovnin,6,1,2,30
-20,Tresa Du Plantier,6,2,2,15
-21,Mace Devers,12,1,1,20
-22,Freddy Swayte,26,1,2,15
-23,Gay Whitloe,10,2,1,2
-24,Irv Elfitt,23,3,1,12
-25,Darsie Walford,29,2,4,25
-26,Alvera Cullip,13,1,3,17
-27,Glyn Draysay,17,1,2,15
-28,Cherida Acland,27,1,4,29
-29,Jacquelyn Millwater,5,1,1,25
-30,Bethany Reinhart,19,2,1,1
+p_name,cont,p_idpayment,p_idfrecuency,p_idamount
+Jaimie Chismon,Tait Suzanna Tait Torri,Consignacion,Semestral,"$ 416,00"
+Whitman Hebblewhite,Skipp Evered Skipp Lusher,Tarjeta,Mensual,"$ 590,00"
+Conant Treherne,Fields Talbert Fields Blackborough,Tarjeta,Mensual,"$ 358,00"
+Averil Ascraft,Jessie Cathee Jessie Sadgrove,Pse,Mensual,"$ 707,00"
+Giulia Farmer,Steven Belle Steven Elegood,Pse,Anual,"$ 212,00"
+Jarvis D'Alesco,Kathryne Rurik Kathryne Vuitte,Consignacion,Semestral,"$ 678,00"
+Loella Crystal,Bobine Inge Bobine MacIlhagga,Consignacion,Mensual,"$ 933,00"
+Phillipe Garard,Kathryne Rurik Kathryne Vuitte,Consignacion,Trimestral,"$ 590,00"
+Robb Timewell,Fionna Christi Fionna Lapidus,Tarjeta,Mensual,"$ 31,00"
+Sydney Duckering,Fionna Christi Fionna Lapidus,Consignacion,Semestral,"$ 678,00"
+Stefania Dunnet,Kerry Filberte Kerry Chooter,Consignacion,Anual,"$ 678,00"
+Elfrieda McClounan,Jorge Rollin Jorge Cejka,Pse,Semestral,"$ 624,00"
+Enos Costy,Row Alexei Row Cringle,Consignacion,Trimestral,"$ 778,00"
+Charmine Banane,Leena Augie Leena Salzberg,Pse,Trimestral,"$ 563,00"
+Corella Jugging,Giordano Earl Giordano Tomasian,Consignacion,Anual,"$ 265,00"
+Flint Meddings,Jessie Cathee Jessie Sadgrove,Consignacion,Anual,"$ 883,00"
+Sam MacIlurick,Fionna Christi Fionna Lapidus,Pse,Semestral,"$ 933,00"
+Gilbertine Hartington,Hort Valeria Hort Yitzowitz,Pse,Anual,"$ 590,00"
+Ab Yegorovnin,Joyann Melisenda Joyann Dunbleton,Tarjeta,Trimestral,"$ 625,00"
+Tresa Du Plantier,Joyann Melisenda Joyann Dunbleton,Pse,Trimestral,"$ 883,00"
+Mace Devers,Caressa Caralie Caressa Readie,Tarjeta,Mensual,"$ 778,00"
+Freddy Swayte,Jorge Rollin Jorge Cejka,Tarjeta,Trimestral,"$ 883,00"
+Gay Whitloe,Jessie Cathee Jessie Sadgrove,Pse,Mensual,"$ 624,00"
+Irv Elfitt,Steven Belle Steven Elegood,Consignacion,Mensual,"$ 416,00"
+Darsie Walford,Lani Sada Lani Corton,Pse,Anual,"$ 590,00"
+Alvera Cullip,Kathryne Rurik Kathryne Vuitte,Tarjeta,Semestral,"$ 933,00"
+Glyn Draysay,Samaria Van Samaria Highwood,Tarjeta,Trimestral,"$ 883,00"
+Cherida Acland,Hort Valeria Hort Yitzowitz,Tarjeta,Anual,"$ 643,00"
+Jacquelyn Millwater,Fields Talbert Fields Blackborough,Tarjeta,Mensual,"$ 590,00"
+Bethany Reinhart,Skipp Evered Skipp Lusher,Pse,Mensual,"$ 51,00"
