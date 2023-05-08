@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "types": [
+      "babel__core"
+    ],
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
