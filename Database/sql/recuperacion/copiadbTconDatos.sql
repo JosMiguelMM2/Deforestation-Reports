@@ -15,16 +15,21 @@ SET check_function_bodies = false;
 SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
+SET default_tablespace = '';
 
+SET default_table_access_method = heap;
 --
 -- Name: deleteamount(integer); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
 CREATE FUNCTION public.deleteamount(p_idamount integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Amount" WHERE "idAmount" = P_idAmount;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Amount" WHERE "idAmount" = P_idAmount;
+
 END;$$;
 
 
@@ -36,9 +41,12 @@ ALTER FUNCTION public.deleteamount(p_idamount integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deleteblogs(p_idblogs integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Blogs" WHERE "idBlogs" = P_idBlogs;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Blogs" WHERE "idBlogs" = P_idBlogs;
+
 END;$$;
 
 
@@ -50,9 +58,12 @@ ALTER FUNCTION public.deleteblogs(p_idblogs integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletecity(p_idcity integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "City" WHERE "idCity" = P_idCity;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "City" WHERE "idCity" = P_idCity;
+
 END;$$;
 
 
@@ -64,9 +75,12 @@ ALTER FUNCTION public.deletecity(p_idcity integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletedeforest_type(p_iddeforest integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Deforest_type" WHERE "idDeforest" = P_idDeforest;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Deforest_type" WHERE "idDeforest" = P_idDeforest;
+
 END;$$;
 
 
@@ -78,9 +92,12 @@ ALTER FUNCTION public.deletedeforest_type(p_iddeforest integer) OWNER TO postgre
 
 CREATE FUNCTION public.deletedonation(p_iddonation integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Donations" WHERE "idDonation" = P_idDonation;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Donations" WHERE "idDonation" = P_idDonation;
+
 END;$$;
 
 
@@ -92,9 +109,12 @@ ALTER FUNCTION public.deletedonation(p_iddonation integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deleteentity_user(p_identityus integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "entity_user" WHERE "idEntityus" = P_idEntityus;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "entity_user" WHERE "idEntityus" = P_idEntityus;
+
 END;$$;
 
 
@@ -106,9 +126,12 @@ ALTER FUNCTION public.deleteentity_user(p_identityus integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletefrecuency(p_idfrecuency integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Frecuency" WHERE "idFrecuency" = P_idFrecuency;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Frecuency" WHERE "idFrecuency" = P_idFrecuency;
+
 END;$$;
 
 
@@ -120,9 +143,12 @@ ALTER FUNCTION public.deletefrecuency(p_idfrecuency integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletegender(p_idgender integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Gender" WHERE "idGender" = P_idGender;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Gender" WHERE "idGender" = P_idGender;
+
 END;$$;
 
 
@@ -134,9 +160,12 @@ ALTER FUNCTION public.deletegender(p_idgender integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletegovernment_entity(p_idgoverenty integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Government_entity" WHERE "idGoverenty" = P_idGoverenty;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Government_entity" WHERE "idGoverenty" = P_idGoverenty;
+
 END;$$;
 
 
@@ -148,9 +177,12 @@ ALTER FUNCTION public.deletegovernment_entity(p_idgoverenty integer) OWNER TO po
 
 CREATE FUNCTION public.deletegradeaffectation(p_idaffectation integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "GradeAffectation" WHERE "idAffectation" = P_idAffectation;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "GradeAffectation" WHERE "idAffectation" = P_idAffectation;
+
 END;$$;
 
 
@@ -162,9 +194,12 @@ ALTER FUNCTION public.deletegradeaffectation(p_idaffectation integer) OWNER TO p
 
 CREATE FUNCTION public.deletelocations(p_idlocations integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "locations" WHERE "idlocations" = P_idlocations;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "locations" WHERE "idlocations" = P_idlocations;
+
 END;$$;
 
 
@@ -176,9 +211,12 @@ ALTER FUNCTION public.deletelocations(p_idlocations integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletepayment(p_idpayment integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Payment" WHERE "idPayment" = P_idPayment;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Payment" WHERE "idPayment" = P_idPayment;
+
 END;$$;
 
 
@@ -190,9 +228,12 @@ ALTER FUNCTION public.deletepayment(p_idpayment integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletephone(p_idphone integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Phone" WHERE "idPhone" = P_idPhone;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Phone" WHERE "idPhone" = P_idPhone;
+
 END;$$;
 
 
@@ -204,9 +245,12 @@ ALTER FUNCTION public.deletephone(p_idphone integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deletereport(p_idreport integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "Report" WHERE "idReport" = P_idReport;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "Report" WHERE "idReport" = P_idReport;
+
 END;$$;
 
 
@@ -218,10 +262,14 @@ ALTER FUNCTION public.deletereport(p_idreport integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deleteuser(p_iduser integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "User" WHERE "idUser" = P_idUser;
-END;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "User" WHERE "idUser" = P_idUser;
+
+END;
+
 $$;
 
 
@@ -233,10 +281,14 @@ ALTER FUNCTION public.deleteuser(p_iduser integer) OWNER TO postgres;
 
 CREATE FUNCTION public.deleteuser_type(p_iduser_type integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    DELETE FROM "user_type" WHERE "idUser_type" = P_idUser_type;
-END;
+    AS $$
+
+BEGIN
+
+    DELETE FROM "user_type" WHERE "idUser_type" = P_idUser_type;
+
+END;
+
 $$;
 
 
@@ -248,20 +300,34 @@ ALTER FUNCTION public.deleteuser_type(p_iduser_type integer) OWNER TO postgres;
 
 CREATE FUNCTION public.insertamount(p_quantity money) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-INSERT INTO public."Amount"(
-
-	"Quantity"
-
-)VALUES (
-
-	p_Quantity
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+INSERT INTO public."Amount"(
+
+
+
+	"Quantity"
+
+
+
+)VALUES (
+
+
+
+	p_Quantity
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -273,31 +339,56 @@ ALTER FUNCTION public.insertamount(p_quantity money) OWNER TO postgres;
 
 CREATE FUNCTION public.insertblogs(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Blogs"(
-
-	"Title",
-	"content",
-	"created_at",
-	"updated_at",
-	"published",
-	"idUser"
-
-)VALUES (
-
-	p_Title,
-	p_Content,
-	p_created_at,
-	p_update_at,
-	p_published,
-	p_idUser
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Blogs"(
+
+
+
+	"Title",
+
+	"content",
+
+	"created_at",
+
+	"updated_at",
+
+	"published",
+
+	"idUser"
+
+
+
+)VALUES (
+
+
+
+	p_Title,
+
+	p_Content,
+
+	p_created_at,
+
+	p_update_at,
+
+	p_published,
+
+	p_idUser
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -309,23 +400,40 @@ ALTER FUNCTION public.insertblogs(p_title character varying, p_content character
 
 CREATE FUNCTION public.insertcity(p_name character varying, p_addres character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."City"(
-
-	"Name",
-    "addres"
-
-)VALUES (
-
-	p_Name,
-    p_addres
-
-	);
-
-END
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."City"(
+
+
+
+	"Name",
+
+    "addres"
+
+
+
+)VALUES (
+
+
+
+	p_Name,
+
+    p_addres
+
+
+
+	);
+
+
+
+END
+
 $$;
 
 
@@ -337,21 +445,36 @@ ALTER FUNCTION public.insertcity(p_name character varying, p_addres character va
 
 CREATE FUNCTION public.insertdeforest_type(p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Deforest_type"(
-
-	"Name"
-
-)VALUES (
-
-	p_Name
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Deforest_type"(
+
+
+
+	"Name"
+
+
+
+)VALUES (
+
+
+
+	p_Name
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -363,29 +486,52 @@ ALTER FUNCTION public.insertdeforest_type(p_name character varying) OWNER TO pos
 
 CREATE FUNCTION public.insertdonations(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Donations"(
-
-	"Name",
-	"iduser",
-	"idpayment",
-	"idfrecuency",
-	"idAmount"
-
-)VALUES (
-
-	p_Name,
-	p_iduser,
-	p_idpayment,
-	p_idfrecuency,
-	p_idAmount
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Donations"(
+
+
+
+	"Name",
+
+	"iduser",
+
+	"idpayment",
+
+	"idfrecuency",
+
+	"idAmount"
+
+
+
+)VALUES (
+
+
+
+	p_Name,
+
+	p_iduser,
+
+	p_idpayment,
+
+	p_idfrecuency,
+
+	p_idAmount
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -397,22 +543,38 @@ ALTER FUNCTION public.insertdonations(p_name character varying, p_iduser integer
 
 CREATE FUNCTION public.insertentity_user(p_idgoverenty integer, p_iduser integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."entity_user"(
-
-	"idGoverenty",
-    "idUser"
-
-)VALUES (
-
-	p_idGoverenty,
-    p_idUser
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."entity_user"(
+
+
+
+	"idGoverenty",
+
+    "idUser"
+
+
+
+)VALUES (
+
+
+
+	p_idGoverenty,
+
+    p_idUser
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -424,20 +586,34 @@ ALTER FUNCTION public.insertentity_user(p_idgoverenty integer, p_iduser integer)
 
 CREATE FUNCTION public.insertfrecuency(p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Frecuency"(
-
-	"Name"
-
-)VALUES (
-
-	p_Name
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Frecuency"(
+
+
+
+	"Name"
+
+
+
+)VALUES (
+
+
+
+	p_Name
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -449,20 +625,34 @@ ALTER FUNCTION public.insertfrecuency(p_name character varying) OWNER TO postgre
 
 CREATE FUNCTION public.insertgender(p_category character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Gender"(
-
-	"Category"
-
-)VALUES (
-
-	p_Category
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Gender"(
+
+
+
+	"Category"
+
+
+
+)VALUES (
+
+
+
+	p_Category
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -474,20 +664,34 @@ ALTER FUNCTION public.insertgender(p_category character varying) OWNER TO postgr
 
 CREATE FUNCTION public.insertgovernment_entity(p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Government_entity"(
-
-	"Name"
-
-)VALUES (
-
-	p_Name
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Government_entity"(
+
+
+
+	"Name"
+
+
+
+)VALUES (
+
+
+
+	p_Name
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -499,23 +703,40 @@ ALTER FUNCTION public.insertgovernment_entity(p_name character varying) OWNER TO
 
 CREATE FUNCTION public.insertgradeaffectation(p_name character varying, p_description character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."GradeAffectation"(
-
-	"Name",
-	"Description"
-
-)VALUES (
-
-	p_Name,
-	p_Description
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."GradeAffectation"(
+
+
+
+	"Name",
+
+	"Description"
+
+
+
+)VALUES (
+
+
+
+	p_Name,
+
+	p_Description
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -527,27 +748,48 @@ ALTER FUNCTION public.insertgradeaffectation(p_name character varying, p_descrip
 
 CREATE FUNCTION public.insertlocations(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."locations"(
-
-	"latitude",
-	"longitude",
-	"nameLocation",
-	"idReport"
-
-)VALUES (
-
-	p_latitude,
-    p_longitude,
-    p_nameLocation,
-    p_idReport
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."locations"(
+
+
+
+	"latitude",
+
+	"longitude",
+
+	"nameLocation",
+
+	"idReport"
+
+
+
+)VALUES (
+
+
+
+	p_latitude,
+
+    p_longitude,
+
+    p_nameLocation,
+
+    p_idReport
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -559,20 +801,34 @@ ALTER FUNCTION public.insertlocations(p_latitude numeric, p_longitude numeric, p
 
 CREATE FUNCTION public.insertpayment(p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Payment"(
-
-	"Name"
-
-)VALUES (
-
-	p_Name
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Payment"(
+
+
+
+	"Name"
+
+
+
+)VALUES (
+
+
+
+	p_Name
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -584,21 +840,36 @@ ALTER FUNCTION public.insertpayment(p_name character varying) OWNER TO postgres;
 
 CREATE FUNCTION public.insertphone(p_number character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Phone"(
-
-	"Number"
-
-)VALUES (
-
-	p_Number
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Phone"(
+
+
+
+	"Number"
+
+
+
+)VALUES (
+
+
+
+	p_Number
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -610,28 +881,50 @@ ALTER FUNCTION public.insertphone(p_number character varying) OWNER TO postgres;
 
 CREATE FUNCTION public.insertreport(p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."Report"(
-
-	"Report",
-	"Datetime",
-	"idDeforest",
-	"idAffectation",
-    "idCity"
-
-)VALUES (
-
-    p_Report,
-	p_Datetime,
-	p_idDeforest,
-    p_idAffectation,
-	p_idCity
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."Report"(
+
+
+
+	"Report",
+
+	"Datetime",
+
+	"idDeforest",
+
+	"idAffectation",
+
+    "idCity"
+
+
+
+)VALUES (
+
+
+
+    p_Report,
+
+	p_Datetime,
+
+	p_idDeforest,
+
+    p_idAffectation,
+
+	p_idCity
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -643,39 +936,72 @@ ALTER FUNCTION public.insertreport(p_report character varying, p_datetime timest
 
 CREATE FUNCTION public.insertuser(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."User"(
-
-	"First_Name",
-	"Second_Name",
-	"First_surname",
-	"Second_surname",
-	"Email",
-	"Password",
-	"idCity",
-	"idPhone",
-	"idGender",
-	"idUser_type"
-
-)VALUES (
-
-	p_First_Name,
-	p_Second_Name,
-	p_First_surname,
-	p_Second_surname,
-	p_Email,
-	p_Password,
-	p_idCity,
-	p_idPhone,
-	p_idGender,
-	p_idUser_type
-
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."User"(
+
+
+
+	"First_Name",
+
+	"Second_Name",
+
+	"First_surname",
+
+	"Second_surname",
+
+	"Email",
+
+	"Password",
+
+	"idCity",
+
+	"idPhone",
+
+	"idGender",
+
+	"idUser_type"
+
+
+
+)VALUES (
+
+
+
+	p_First_Name,
+
+	p_Second_Name,
+
+	p_First_surname,
+
+	p_Second_surname,
+
+	p_Email,
+
+	p_Password,
+
+	p_idCity,
+
+	p_idPhone,
+
+	p_idGender,
+
+	p_idUser_type
+
+
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -687,19 +1013,32 @@ ALTER FUNCTION public.insertuser(p_first_name character varying, p_second_name c
 
 CREATE FUNCTION public.insertuser_type(p_type character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-INSERT INTO public."user_type"(
-
-	"Type"
-
-)VALUES (
-    p_Type
-	);
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+INSERT INTO public."user_type"(
+
+
+
+	"Type"
+
+
+
+)VALUES (
+
+    p_Type
+
+	);
+
+
+
+END;
+
 $$;
 
 
@@ -711,13 +1050,20 @@ ALTER FUNCTION public.insertuser_type(p_type character varying) OWNER TO postgre
 
 CREATE FUNCTION public.queryamount() RETURNS TABLE(quantity money)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    amt."Quantity"
-    FROM "Amount" amt;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    amt."Quantity"
+
+    FROM "Amount" amt;
+
+END;
+
 $$;
 
 
@@ -729,22 +1075,38 @@ ALTER FUNCTION public.queryamount() OWNER TO postgres;
 
 CREATE FUNCTION public.queryblogs() RETURNS TABLE(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_updated_at timestamp without time zone, p_published boolean, p_iduser text)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-     RETURN QUERY SELECT
-
-    B."Title" as Title,
-    B."content" as Content,
-    B."created_at" as Create_at,
-    B."updated_at" as Update_at,
-    B."published" as published_at,
-    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
-
-    FROM "Blogs" B
-    JOIN "User" u ON B."idUser" = u."idUser";
-
-
-END
+    AS $$
+
+BEGIN
+
+     RETURN QUERY SELECT
+
+
+
+    B."Title" as Title,
+
+    B."content" as Content,
+
+    B."created_at" as Create_at,
+
+    B."updated_at" as Update_at,
+
+    B."published" as published_at,
+
+    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
+
+
+
+    FROM "Blogs" B
+
+    JOIN "User" u ON B."idUser" = u."idUser";
+
+
+
+
+
+END
+
 $$;
 
 
@@ -756,15 +1118,24 @@ ALTER FUNCTION public.queryblogs() OWNER TO postgres;
 
 CREATE FUNCTION public.querycity() RETURNS TABLE(p_name character varying, p_addres character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-     RETURN QUERY SELECT
-
-    c."Name" as City,
-    c.addres as Addres
-    FROM "City" c;
-
-END;
+    AS $$
+
+BEGIN
+
+     RETURN QUERY SELECT
+
+
+
+    c."Name" as City,
+
+    c.addres as Addres
+
+    FROM "City" c;
+
+
+
+END;
+
 $$;
 
 
@@ -776,14 +1147,22 @@ ALTER FUNCTION public.querycity() OWNER TO postgres;
 
 CREATE FUNCTION public.querydeforest_type() RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-     RETURN QUERY SELECT
-
-    Dtyp."Name" as Type
-    FROM "Deforest_type" Dtyp;
-
-END;
+    AS $$
+
+BEGIN
+
+     RETURN QUERY SELECT
+
+
+
+    Dtyp."Name" as Type
+
+    FROM "Deforest_type" Dtyp;
+
+
+
+END;
+
 $$;
 
 
@@ -795,22 +1174,38 @@ ALTER FUNCTION public.querydeforest_type() OWNER TO postgres;
 
 CREATE FUNCTION public.querydonations() RETURNS TABLE(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        D."Name" as Donationame,
-        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
-        p."Name" as paymentmethod,
-        f."Name" as frecuency,
-        a."Quantity"
-
-    FROM "Donations" D
-
-    JOIN "User" u ON D."iduser" = u."idUser"
-    JOIN "Payment" p ON D."idpayment" = p."idPayment"
-    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
-    JOIN "Amount" a ON D."idAmount" = a."idAmount";
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        D."Name" as Donationame,
+
+        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
+
+        p."Name" as paymentmethod,
+
+        f."Name" as frecuency,
+
+        a."Quantity"
+
+
+
+    FROM "Donations" D
+
+
+
+    JOIN "User" u ON D."iduser" = u."idUser"
+
+    JOIN "Payment" p ON D."idpayment" = p."idPayment"
+
+    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
+
+    JOIN "Amount" a ON D."idAmount" = a."idAmount";
+
+END
+
 $$;
 
 
@@ -822,15 +1217,24 @@ ALTER FUNCTION public.querydonations() OWNER TO postgres;
 
 CREATE FUNCTION public.queryentity_user() RETURNS TABLE(p_idgoverenty integer, p_iduser integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    Eu."idGoverenty",
-    Eu."idUser"
-
-    FROM "entity_user" Eu;
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    Eu."idGoverenty",
+
+    Eu."idUser"
+
+
+
+    FROM "entity_user" Eu;
+
+
+
+END;
+
 $$;
 
 
@@ -842,14 +1246,22 @@ ALTER FUNCTION public.queryentity_user() OWNER TO postgres;
 
 CREATE FUNCTION public.queryfrecuency() RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    F."Name"
-
-    FROM "Frecuency" F;
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    F."Name"
+
+
+
+    FROM "Frecuency" F;
+
+
+
+END;
+
 $$;
 
 
@@ -861,14 +1273,22 @@ ALTER FUNCTION public.queryfrecuency() OWNER TO postgres;
 
 CREATE FUNCTION public.querygender() RETURNS TABLE(p_category character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    G."Category"
-
-    FROM "Gender" G;
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    G."Category"
+
+
+
+    FROM "Gender" G;
+
+
+
+END;
+
 $$;
 
 
@@ -880,14 +1300,22 @@ ALTER FUNCTION public.querygender() OWNER TO postgres;
 
 CREATE FUNCTION public.querygovernment_entity() RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    Ge."Name"
-
-    FROM "Government_entity" Ge;
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    Ge."Name"
+
+
+
+    FROM "Government_entity" Ge;
+
+
+
+END;
+
 $$;
 
 
@@ -899,15 +1327,24 @@ ALTER FUNCTION public.querygovernment_entity() OWNER TO postgres;
 
 CREATE FUNCTION public.querygradeaffectation() RETURNS TABLE(p_name character varying, p_description character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    ga."Name" as grade,
-    ga."Description"
-
-    FROM "GradeAffectation" ga;
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    ga."Name" as grade,
+
+    ga."Description"
+
+
+
+    FROM "GradeAffectation" ga;
+
+
+
+END;
+
 $$;
 
 
@@ -919,14 +1356,22 @@ ALTER FUNCTION public.querygradeaffectation() OWNER TO postgres;
 
 CREATE FUNCTION public.queryidamount(p_idamount integer) RETURNS TABLE(quantity money)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    amt."Quantity"
-    FROM "Amount" amt
-    WHERE amt."idAmount" = P_idAmount;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    amt."Quantity"
+
+    FROM "Amount" amt
+
+    WHERE amt."idAmount" = P_idAmount;
+
+END;
+
 $$;
 
 
@@ -938,22 +1383,38 @@ ALTER FUNCTION public.queryidamount(p_idamount integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidblogs(p_idblogs integer) RETURNS TABLE(p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_updated_at timestamp without time zone, p_published boolean, p_iduser text)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-RETURN QUERY SELECT
-    B."Title" as Title,
-    B."content" as Content,
-    B."created_at" as Create_at,
-    B."updated_at" as Update_at,
-    B."published" as published_at,
-    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
-
-    FROM "Blogs" B
-    JOIN "User" u ON B."idUser" = u."idUser"
-    WHERE B."idBlogs" = P_idBlogs;
-
-END
+    AS $$
+
+BEGIN
+
+
+
+RETURN QUERY SELECT
+
+    B."Title" as Title,
+
+    B."content" as Content,
+
+    B."created_at" as Create_at,
+
+    B."updated_at" as Update_at,
+
+    B."published" as published_at,
+
+    concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username
+
+
+
+    FROM "Blogs" B
+
+    JOIN "User" u ON B."idUser" = u."idUser"
+
+    WHERE B."idBlogs" = P_idBlogs;
+
+
+
+END
+
 $$;
 
 
@@ -965,15 +1426,24 @@ ALTER FUNCTION public.queryidblogs(p_idblogs integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidcity(p_idcity integer) RETURNS TABLE(p_name character varying, p_addres character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    c."Name" as City,
-    c.addres as Addres
-    FROM "City" c
-    WHERE c."idCity" = P_idCity;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    c."Name" as City,
+
+    c.addres as Addres
+
+    FROM "City" c
+
+    WHERE c."idCity" = P_idCity;
+
+END;
+
 $$;
 
 
@@ -985,14 +1455,22 @@ ALTER FUNCTION public.queryidcity(p_idcity integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryiddeforest_type(p_iddeforest integer) RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    Dtyp."Name" as Type
-    FROM "Deforest_type" Dtyp
-    WHERE Dtyp."idDeforest" = P_idDeforest;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    Dtyp."Name" as Type
+
+    FROM "Deforest_type" Dtyp
+
+    WHERE Dtyp."idDeforest" = P_idDeforest;
+
+END;
+
 $$;
 
 
@@ -1004,23 +1482,40 @@ ALTER FUNCTION public.queryiddeforest_type(p_iddeforest integer) OWNER TO postgr
 
 CREATE FUNCTION public.queryiddonations(p_iddonation integer) RETURNS TABLE(p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        D."Name" as Donationame,
-        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
-        p."Name" as paymentmethod,
-        f."Name" as frecuency,
-        a."Quantity"
-
-    FROM "Donations" D
-
-    JOIN "User" u ON D."iduser" = u."idUser"
-    JOIN "Payment" p ON D."idpayment" = p."idPayment"
-    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
-    JOIN "Amount" a ON D."idAmount" = a."idAmount"
-    WHERE D."idDonation" = P_idDonation;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        D."Name" as Donationame,
+
+        concat("First_Name", ' ',"Second_Name",' ',"First_Name",' ',"Second_surname") as username,
+
+        p."Name" as paymentmethod,
+
+        f."Name" as frecuency,
+
+        a."Quantity"
+
+
+
+    FROM "Donations" D
+
+
+
+    JOIN "User" u ON D."iduser" = u."idUser"
+
+    JOIN "Payment" p ON D."idpayment" = p."idPayment"
+
+    JOIN "Frecuency" f ON  D."idfrecuency" = f."idFrecuency"
+
+    JOIN "Amount" a ON D."idAmount" = a."idAmount"
+
+    WHERE D."idDonation" = P_idDonation;
+
+END
+
 $$;
 
 
@@ -1032,15 +1527,24 @@ ALTER FUNCTION public.queryiddonations(p_iddonation integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidentity_user(p_identityus integer) RETURNS TABLE(p_idgoverenty integer, p_iduser integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    Eu."idGoverenty",
-    Eu."idUser"
-
-    FROM "entity_user" Eu
-    WHERE Eu."idEntityus" = P_idEntityus;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    Eu."idGoverenty",
+
+    Eu."idUser"
+
+
+
+    FROM "entity_user" Eu
+
+    WHERE Eu."idEntityus" = P_idEntityus;
+
+END
+
 $$;
 
 
@@ -1052,14 +1556,22 @@ ALTER FUNCTION public.queryidentity_user(p_identityus integer) OWNER TO postgres
 
 CREATE FUNCTION public.queryidfrecuency(p_idfrecuency integer) RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    F."Name"
-
-    FROM "Frecuency" F
-    WHERE F."idFrecuency" = P_idFrecuency;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    F."Name"
+
+
+
+    FROM "Frecuency" F
+
+    WHERE F."idFrecuency" = P_idFrecuency;
+
+END
+
 $$;
 
 
@@ -1071,14 +1583,22 @@ ALTER FUNCTION public.queryidfrecuency(p_idfrecuency integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidgender(p_idgender integer) RETURNS TABLE(p_category character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    G."Category"
-
-    FROM "Gender" G
-    WHERE G."idGender" = P_idGender;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    G."Category"
+
+
+
+    FROM "Gender" G
+
+    WHERE G."idGender" = P_idGender;
+
+END
+
 $$;
 
 
@@ -1090,14 +1610,22 @@ ALTER FUNCTION public.queryidgender(p_idgender integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidgovernment_entity(p_idgoverenty integer) RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    Ge."Name"
-
-    FROM "Government_entity" Ge
-    WHERE Ge."idGoverenty" = P_idGoverenty;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    Ge."Name"
+
+
+
+    FROM "Government_entity" Ge
+
+    WHERE Ge."idGoverenty" = P_idGoverenty;
+
+END
+
 $$;
 
 
@@ -1109,16 +1637,26 @@ ALTER FUNCTION public.queryidgovernment_entity(p_idgoverenty integer) OWNER TO p
 
 CREATE FUNCTION public.queryidgradeaffectation(p_idaffectation integer) RETURNS TABLE(p_name character varying, p_description character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    ga."Name" as grade,
-    ga."Description"
-
-    FROM "GradeAffectation" ga
-
-    WHERE ga."idAffectation" = P_idAffectation;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    ga."Name" as grade,
+
+    ga."Description"
+
+
+
+    FROM "GradeAffectation" ga
+
+
+
+    WHERE ga."idAffectation" = P_idAffectation;
+
+END;
+
 $$;
 
 
@@ -1130,18 +1668,30 @@ ALTER FUNCTION public.queryidgradeaffectation(p_idaffectation integer) OWNER TO 
 
 CREATE FUNCTION public.queryidlocations(p_idlocations integer) RETURNS TABLE(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        L."latitude",
-        L."longitude",
-        L."nameLocation",
-        R."Report"
-
-    FROM "locations" L
-    JOIN "Report" R ON L."idReport" = R."idReport"
-    WHERE L."idlocations" = P_idlocations;
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        L."latitude",
+
+        L."longitude",
+
+        L."nameLocation",
+
+        R."Report"
+
+
+
+    FROM "locations" L
+
+    JOIN "Report" R ON L."idReport" = R."idReport"
+
+    WHERE L."idlocations" = P_idlocations;
+
+END
+
 $$;
 
 
@@ -1153,14 +1703,22 @@ ALTER FUNCTION public.queryidlocations(p_idlocations integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidpayment(p_idpayment integer) RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    Py."Name" as payment_method
-    FROM "Payment" Py
-    WHERE Py."idPayment" = P_idPayment;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    Py."Name" as payment_method
+
+    FROM "Payment" Py
+
+    WHERE Py."idPayment" = P_idPayment;
+
+END;
+
 $$;
 
 
@@ -1172,14 +1730,22 @@ ALTER FUNCTION public.queryidpayment(p_idpayment integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidphone(p_idphone integer) RETURNS TABLE(p_number character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    P."Number"
-
-    FROM "Phone" P
-    WHERE P."idPhone" = P_idPhone;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    P."Number"
+
+
+
+    FROM "Phone" P
+
+    WHERE P."idPhone" = P_idPhone;
+
+END;
+
 $$;
 
 
@@ -1191,24 +1757,42 @@ ALTER FUNCTION public.queryidphone(p_idphone integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryidreport(p_idreport integer) RETURNS TABLE(p_report character varying, p_datetime timestamp without time zone, p_deforest character varying, p_affectation character varying, p_description character varying, p_city character varying, p_addres character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        R."Report",
-        R."Datetime",
-        Dt."Name" as Type,
-        ga."Name" as Grade,
-        ga."Description",
-        c."Name" as City,
-        c.addres as Addres
-
-    FROM "Report" R
-    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
-    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
-    JOIN "City" c ON R."idCity" = c."idCity"
-
-    WHERE R."idReport" = P_idReport;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        R."Report",
+
+        R."Datetime",
+
+        Dt."Name" as Type,
+
+        ga."Name" as Grade,
+
+        ga."Description",
+
+        c."Name" as City,
+
+        c.addres as Addres
+
+
+
+    FROM "Report" R
+
+    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
+
+    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
+
+    JOIN "City" c ON R."idCity" = c."idCity"
+
+
+
+    WHERE R."idReport" = P_idReport;
+
+END;
+
 $$;
 
 
@@ -1220,27 +1804,48 @@ ALTER FUNCTION public.queryidreport(p_idreport integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryiduser(p_iduser integer) RETURNS TABLE(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_city character varying, p_address character varying, p_phone character varying, p_gender character varying, p_user_type character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        U."First_Name",
-        U."Second_Name",
-        U."First_surname",
-        U."Second_surname",
-        U."Email",
-        U."Password",
-        c."Name" as City,
-        c.addres as Addres,
-        p."Number" as Phone,
-        g."Category" as Gender,
-        utyp."Type" as Type
-    FROM "User" U
-    JOIN "City" c ON U."idCity" = c."idCity"
-    JOIN "Phone" p ON U."idPhone" = p."idPhone"
-    JOIN "Gender" g ON U."idGender" = g."idGender"
-    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type"
-    WHERE U."idUser" = P_idUser;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        U."First_Name",
+
+        U."Second_Name",
+
+        U."First_surname",
+
+        U."Second_surname",
+
+        U."Email",
+
+        U."Password",
+
+        c."Name" as City,
+
+        c.addres as Addres,
+
+        p."Number" as Phone,
+
+        g."Category" as Gender,
+
+        utyp."Type" as Type
+
+    FROM "User" U
+
+    JOIN "City" c ON U."idCity" = c."idCity"
+
+    JOIN "Phone" p ON U."idPhone" = p."idPhone"
+
+    JOIN "Gender" g ON U."idGender" = g."idGender"
+
+    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type"
+
+    WHERE U."idUser" = P_idUser;
+
+END;
+
 $$;
 
 
@@ -1252,15 +1857,24 @@ ALTER FUNCTION public.queryiduser(p_iduser integer) OWNER TO postgres;
 
 CREATE FUNCTION public.queryiduser_type(p_iduser_type integer) RETURNS TABLE(p_type character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-        Utyp."Type"
-
-    FROM "user_type" Utyp
-    WHERE Utyp."idUser_type" = P_idUser_type;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+        Utyp."Type"
+
+
+
+    FROM "user_type" Utyp
+
+    WHERE Utyp."idUser_type" = P_idUser_type;
+
+END;
+
 $$;
 
 
@@ -1272,17 +1886,28 @@ ALTER FUNCTION public.queryiduser_type(p_iduser_type integer) OWNER TO postgres;
 
 CREATE FUNCTION public.querylocations() RETURNS TABLE(p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        L."latitude",
-        L."longitude",
-        L."nameLocation",
-        R."Report"
-
-    FROM "locations" L
-    JOIN "Report" R ON L."idReport" = R."idReport";
-END
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        L."latitude",
+
+        L."longitude",
+
+        L."nameLocation",
+
+        R."Report"
+
+
+
+    FROM "locations" L
+
+    JOIN "Report" R ON L."idReport" = R."idReport";
+
+END
+
 $$;
 
 
@@ -1294,13 +1919,20 @@ ALTER FUNCTION public.querylocations() OWNER TO postgres;
 
 CREATE FUNCTION public.querypayment() RETURNS TABLE(p_name character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-
-    Py."Name" as payment_method
-    FROM "Payment" Py;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+
+
+    Py."Name" as payment_method
+
+    FROM "Payment" Py;
+
+END;
+
 $$;
 
 
@@ -1312,13 +1944,20 @@ ALTER FUNCTION public.querypayment() OWNER TO postgres;
 
 CREATE FUNCTION public.queryphone() RETURNS TABLE(p_number character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-    P."Number"
-
-    FROM "Phone" P;
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+    P."Number"
+
+
+
+    FROM "Phone" P;
+
+END;
+
 $$;
 
 
@@ -1330,23 +1969,40 @@ ALTER FUNCTION public.queryphone() OWNER TO postgres;
 
 CREATE FUNCTION public.queryreport() RETURNS TABLE(p_report character varying, p_datetime timestamp without time zone, p_deforest character varying, p_affectation character varying, p_description character varying, p_city character varying, p_addres character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-    RETURN QUERY SELECT
-        R."Report",
-        R."Datetime",
-        Dt."Name" as Type,
-        ga."Name" as Grade,
-        ga."Description",
-        c."Name" as City,
-        c.addres as Addres
-
-    FROM "Report" R
-    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
-    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
-    JOIN "City" c ON R."idCity" = c."idCity";
-
-END;
+    AS $$
+
+BEGIN
+
+    RETURN QUERY SELECT
+
+        R."Report",
+
+        R."Datetime",
+
+        Dt."Name" as Type,
+
+        ga."Name" as Grade,
+
+        ga."Description",
+
+        c."Name" as City,
+
+        c.addres as Addres
+
+
+
+    FROM "Report" R
+
+    JOIN "Deforest_type" Dt ON R."idDeforest" = Dt."idDeforest"
+
+    JOIN "GradeAffectation" ga ON R."idAffectation" = ga."idAffectation"
+
+    JOIN "City" c ON R."idCity" = c."idCity";
+
+
+
+END;
+
 $$;
 
 
@@ -1358,27 +2014,48 @@ ALTER FUNCTION public.queryreport() OWNER TO postgres;
 
 CREATE FUNCTION public.queryuser() RETURNS TABLE(p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_city character varying, p_address character varying, p_phone character varying, p_gender character varying, p_user_type character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-     RETURN QUERY SELECT
-        U."First_Name",
-        U."Second_Name",
-        U."First_surname",
-        U."Second_surname",
-        U."Email",
-        U."Password",
-        c."Name" as City,
-        c.addres as Addres,
-        p."Number" as Phone,
-        g."Category" as Gender,
-        utyp."Type" as Type
-    FROM "User" U
-    JOIN "City" c ON U."idCity" = c."idCity"
-    JOIN "Phone" p ON U."idPhone" = p."idPhone"
-    JOIN "Gender" g ON U."idGender" = g."idGender"
-    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type";
-
-END;
+    AS $$
+
+BEGIN
+
+     RETURN QUERY SELECT
+
+        U."First_Name",
+
+        U."Second_Name",
+
+        U."First_surname",
+
+        U."Second_surname",
+
+        U."Email",
+
+        U."Password",
+
+        c."Name" as City,
+
+        c.addres as Addres,
+
+        p."Number" as Phone,
+
+        g."Category" as Gender,
+
+        utyp."Type" as Type
+
+    FROM "User" U
+
+    JOIN "City" c ON U."idCity" = c."idCity"
+
+    JOIN "Phone" p ON U."idPhone" = p."idPhone"
+
+    JOIN "Gender" g ON U."idGender" = g."idGender"
+
+    JOIN "user_type" utyp ON U."idUser_type" = utyp."idUser_type";
+
+
+
+END;
+
 $$;
 
 
@@ -1390,15 +2067,24 @@ ALTER FUNCTION public.queryuser() OWNER TO postgres;
 
 CREATE FUNCTION public.queryuser_type() RETURNS TABLE(p_type character varying)
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-     RETURN QUERY SELECT
-
-        Utyp."Type"
-
-        FROM "user_type" Utyp;
-
-END;
+    AS $$
+
+BEGIN
+
+     RETURN QUERY SELECT
+
+
+
+        Utyp."Type"
+
+
+
+        FROM "user_type" Utyp;
+
+
+
+END;
+
 $$;
 
 
@@ -1410,17 +2096,28 @@ ALTER FUNCTION public.queryuser_type() OWNER TO postgres;
 
 CREATE FUNCTION public.updateamount(p_idamount integer, p_quantity money) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Amount" SET
-
-	"Quantity" = p_Quantity
-
-	WHERE "idAmount" = P_idAmount;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Amount" SET
+
+
+
+	"Quantity" = p_Quantity
+
+
+
+	WHERE "idAmount" = P_idAmount;
+
+
+
+END;
+
 $$;
 
 
@@ -1432,22 +2129,38 @@ ALTER FUNCTION public.updateamount(p_idamount integer, p_quantity money) OWNER T
 
 CREATE FUNCTION public.updateblogs(p_idblogs integer, p_title character varying, p_content character varying, p_created_at timestamp without time zone, p_update_at timestamp without time zone, p_published boolean, p_iduser integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Blogs" SET
-
-	"Title" = p_Title,
-	"content" = p_Content,
-	"created_at" = p_created_at,
-	"updated_at" = p_update_at,
-	"published" = p_published,
-	"idUser" = p_idUser
-
-	WHERE "idBlogs" = P_idBlogs;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Blogs" SET
+
+
+
+	"Title" = p_Title,
+
+	"content" = p_Content,
+
+	"created_at" = p_created_at,
+
+	"updated_at" = p_update_at,
+
+	"published" = p_published,
+
+	"idUser" = p_idUser
+
+
+
+	WHERE "idBlogs" = P_idBlogs;
+
+
+
+END;
+
 $$;
 
 
@@ -1459,18 +2172,30 @@ ALTER FUNCTION public.updateblogs(p_idblogs integer, p_title character varying, 
 
 CREATE FUNCTION public.updatecity(p_idcity integer, p_name character varying, p_addres character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."City" SET
-
-	"Name" = p_Name,
-    "addres" = p_addres
-
-	WHERE "idCity" = P_idCity;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."City" SET
+
+
+
+	"Name" = p_Name,
+
+    "addres" = p_addres
+
+
+
+	WHERE "idCity" = P_idCity;
+
+
+
+END;
+
 $$;
 
 
@@ -1482,17 +2207,28 @@ ALTER FUNCTION public.updatecity(p_idcity integer, p_name character varying, p_a
 
 CREATE FUNCTION public.updatedeforest_type(p_iddeforest integer, p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Deforest_type" SET
-
-	"Name" = p_Name
-
-	WHERE "idDeforest" = P_idDeforest;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Deforest_type" SET
+
+
+
+	"Name" = p_Name
+
+
+
+	WHERE "idDeforest" = P_idDeforest;
+
+
+
+END;
+
 $$;
 
 
@@ -1504,21 +2240,36 @@ ALTER FUNCTION public.updatedeforest_type(p_iddeforest integer, p_name character
 
 CREATE FUNCTION public.updatedonations(p_iddonation integer, p_name character varying, p_iduser integer, p_idpayment integer, p_idfrecuency integer, p_idamount integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Donations" SET
-
-	"Name" = p_Name,
-	"iduser" = p_iduser,
-	"idpayment" = p_idpayment,
-	"idfrecuency" = p_idfrecuency,
-	"idAmount" = p_idAmount
-
-	WHERE "idDonation" = P_idDonation;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Donations" SET
+
+
+
+	"Name" = p_Name,
+
+	"iduser" = p_iduser,
+
+	"idpayment" = p_idpayment,
+
+	"idfrecuency" = p_idfrecuency,
+
+	"idAmount" = p_idAmount
+
+
+
+	WHERE "idDonation" = P_idDonation;
+
+
+
+END;
+
 $$;
 
 
@@ -1530,18 +2281,30 @@ ALTER FUNCTION public.updatedonations(p_iddonation integer, p_name character var
 
 CREATE FUNCTION public.updateentity_user(p_identityus integer, p_idgoverenty integer, p_iduser integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."entity_user" SET
-
-	"idGoverenty" = p_idGoverenty,
-	"idUser" = p_idUser
-
-	WHERE "idEntityus" = P_idEntityus;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."entity_user" SET
+
+
+
+	"idGoverenty" = p_idGoverenty,
+
+	"idUser" = p_idUser
+
+
+
+	WHERE "idEntityus" = P_idEntityus;
+
+
+
+END;
+
 $$;
 
 
@@ -1553,17 +2316,28 @@ ALTER FUNCTION public.updateentity_user(p_identityus integer, p_idgoverenty inte
 
 CREATE FUNCTION public.updatefrecuency(p_idfrecuency integer, p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Frecuency" SET
-
-	"Name" = p_Name
-
-	WHERE "idFrecuency" = P_idFrecuency;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Frecuency" SET
+
+
+
+	"Name" = p_Name
+
+
+
+	WHERE "idFrecuency" = P_idFrecuency;
+
+
+
+END;
+
 $$;
 
 
@@ -1575,17 +2349,28 @@ ALTER FUNCTION public.updatefrecuency(p_idfrecuency integer, p_name character va
 
 CREATE FUNCTION public.updategender(p_idgender integer, p_category character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Gender" SET
-
-	"Category" = p_Category
-
-	WHERE "idGender" = P_idGender;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Gender" SET
+
+
+
+	"Category" = p_Category
+
+
+
+	WHERE "idGender" = P_idGender;
+
+
+
+END;
+
 $$;
 
 
@@ -1597,17 +2382,28 @@ ALTER FUNCTION public.updategender(p_idgender integer, p_category character vary
 
 CREATE FUNCTION public.updategovernment_entity(p_idgoverenty integer, p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Government_entity" SET
-
-	"Name" = p_Name
-
-	WHERE "idGoverenty" = P_idGoverenty;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Government_entity" SET
+
+
+
+	"Name" = p_Name
+
+
+
+	WHERE "idGoverenty" = P_idGoverenty;
+
+
+
+END;
+
 $$;
 
 
@@ -1619,18 +2415,30 @@ ALTER FUNCTION public.updategovernment_entity(p_idgoverenty integer, p_name char
 
 CREATE FUNCTION public.updategradeaffectation(p_idaffectation integer, p_name character varying, p_description character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."GradeAffectation" SET
-
-	"Name" = p_Name,
-	"Description" = p_Description
-
-	WHERE "idAffectation" = P_idAffectation;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."GradeAffectation" SET
+
+
+
+	"Name" = p_Name,
+
+	"Description" = p_Description
+
+
+
+	WHERE "idAffectation" = P_idAffectation;
+
+
+
+END;
+
 $$;
 
 
@@ -1642,20 +2450,34 @@ ALTER FUNCTION public.updategradeaffectation(p_idaffectation integer, p_name cha
 
 CREATE FUNCTION public.updatelocations(p_idlocations integer, p_latitude numeric, p_longitude numeric, p_namelocation character varying, p_idreport integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."locations" SET
-
-	"latitude" =  p_latitude ,
-	"longitude" = p_longitude,
-	"nameLocation" = p_nameLocation,
-	"idReport" = p_idReport
-
-	WHERE "idlocations" = P_idlocations;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."locations" SET
+
+
+
+	"latitude" =  p_latitude ,
+
+	"longitude" = p_longitude,
+
+	"nameLocation" = p_nameLocation,
+
+	"idReport" = p_idReport
+
+
+
+	WHERE "idlocations" = P_idlocations;
+
+
+
+END;
+
 $$;
 
 
@@ -1667,16 +2489,26 @@ ALTER FUNCTION public.updatelocations(p_idlocations integer, p_latitude numeric,
 
 CREATE FUNCTION public.updatepayment(p_idpayment integer, p_name character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Payment" SET
-
-	"Name" = p_Name
-    WHERE "idPayment"= P_idPayment;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Payment" SET
+
+
+
+	"Name" = p_Name
+
+    WHERE "idPayment"= P_idPayment;
+
+
+
+END;
+
 $$;
 
 
@@ -1688,15 +2520,24 @@ ALTER FUNCTION public.updatepayment(p_idpayment integer, p_name character varyin
 
 CREATE FUNCTION public.updatephone(p_idphone integer, p_number character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-UPDATE public."Phone" SET
-
-	"Number" = p_Number
-    WHERE "idPhone" = p_idPhone;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+UPDATE public."Phone" SET
+
+
+
+	"Number" = p_Number
+
+    WHERE "idPhone" = p_idPhone;
+
+
+
+END;
+
 $$;
 
 
@@ -1708,21 +2549,36 @@ ALTER FUNCTION public.updatephone(p_idphone integer, p_number character varying)
 
 CREATE FUNCTION public.updatereport(p_idreport integer, p_report character varying, p_datetime timestamp without time zone, p_iddeforest integer, p_idaffectation integer, p_idcity integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."Report" SET
-
-    "Report" = p_Report,
-    "Datetime"= p_Datetime,
-    "idDeforest"= p_idDeforest,
-    "idAffectation" = p_idAffectation,
-	"idCity" = p_idCity
-
-	WHERE "idReport" = P_idReport;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."Report" SET
+
+
+
+    "Report" = p_Report,
+
+    "Datetime"= p_Datetime,
+
+    "idDeforest"= p_idDeforest,
+
+    "idAffectation" = p_idAffectation,
+
+	"idCity" = p_idCity
+
+
+
+	WHERE "idReport" = P_idReport;
+
+
+
+END;
+
 $$;
 
 
@@ -1734,26 +2590,46 @@ ALTER FUNCTION public.updatereport(p_idreport integer, p_report character varyin
 
 CREATE FUNCTION public.updateuser(p_iduser integer, p_first_name character varying, p_second_name character varying, p_first_surname character varying, p_second_surname character varying, p_email character varying, p_password character varying, p_idcity integer, p_idphone integer, p_idgender integer, p_iduser_type integer) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-
-UPDATE public."User" SET
-
-	"First_Name" = p_First_Name,
-	"Second_Name" = p_Second_Name,
-	"First_surname" = p_First_surname,
-	"Second_surname" = p_Second_surname,
-	"Email" = p_Email,
-	"Password" = p_Password,
-	"idCity" = p_idCity,
-	"idPhone" = p_idPhone,
-	"idGender" = p_idGender,
-	"idUser_type" = p_idUser_type
-
-	WHERE "idUser" = P_idUser;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+
+
+UPDATE public."User" SET
+
+
+
+	"First_Name" = p_First_Name,
+
+	"Second_Name" = p_Second_Name,
+
+	"First_surname" = p_First_surname,
+
+	"Second_surname" = p_Second_surname,
+
+	"Email" = p_Email,
+
+	"Password" = p_Password,
+
+	"idCity" = p_idCity,
+
+	"idPhone" = p_idPhone,
+
+	"idGender" = p_idGender,
+
+	"idUser_type" = p_idUser_type
+
+
+
+	WHERE "idUser" = P_idUser;
+
+
+
+END;
+
 $$;
 
 
@@ -1765,24 +2641,32 @@ ALTER FUNCTION public.updateuser(p_iduser integer, p_first_name character varyin
 
 CREATE FUNCTION public.updateuser_type(p_iduser_type integer, p_type character varying) RETURNS void
     LANGUAGE plpgsql
-    AS $$
-BEGIN
-
-UPDATE public."user_type" SET
-
-	"Type" = p_Type
-
-	WHERE "idUser_type" = P_idUser_type;
-
-END;
+    AS $$
+
+BEGIN
+
+
+
+UPDATE public."user_type" SET
+
+
+
+	"Type" = p_Type
+
+
+
+	WHERE "idUser_type" = P_idUser_type;
+
+
+
+END;
+
 $$;
 
 
 ALTER FUNCTION public.updateuser_type(p_iduser_type integer, p_type character varying) OWNER TO postgres;
 
-SET default_tablespace = '';
 
-SET default_table_access_method = heap;
 
 --
 -- Name: GradeAffectation; Type: TABLE; Schema: public; Owner: postgres
