@@ -1,5 +1,7 @@
 import { Global, Module } from "@nestjs/common";
 import { Client } from "pg";
+import * as process from "process";
+import config from "../../../interfaces/config/configutation";
 
 export const conection=new Client({
   user: 'postgres',
