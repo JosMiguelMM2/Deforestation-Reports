@@ -34,6 +34,7 @@ import { PaymentService } from './app/services/payment/payment.service';
 import { PhoneService } from './app/services/phone/phone.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
 
+
 @Module({
   imports: [SuperposgreModule],
   controllers: [
