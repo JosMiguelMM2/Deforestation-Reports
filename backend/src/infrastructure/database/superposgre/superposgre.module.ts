@@ -6,8 +6,8 @@ import config from "../../../interfaces/config/configutation";
 export const conection=new Client({
   user: 'postgres',
   host: 'localhost',
-  database: 'proyec',
-  password:'kiup-QUY.+*1094Rxsdp;uy',
+  database: 'Haltodforest_DB',
+  password:'password',
   port: 5432,
 });
 
