@@ -1,9 +1,20 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
+import config from './interfaces/config/configutation'
+
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+
+  // TODO: Agregar direccion del front al cors
+  app.enableCors({
+    origin: 'http://localhost:8000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
+  });
+
+  const port = config().port;
+  await app.listen(port);
 }
 
 bootstrap();
