@@ -1,0 +1,48 @@
+{
+  "backend": {
+    "name": "backend-app",
+    "location": "West US",
+    "runtime": "node",
+    "resources": [
+      {
+        "type": "appService",
+        "sku": "basic",
+        "name": "backend-service",
+        "properties": {
+          "appSettings": [
+            { "name": "DB_HOST", "value": "database" },
+            { "name": "DB_USER", "value": "username" },
+            { "name": "DB_PASSWORD", "value": "password" }
+          ]
+        },
+        "commands": [
+          { "command": "npm install", "workingDirectory": "backend" },
+          { "command": "npm run build", "workingDirectory": "backend" },
+          { "command": "npm run start:prod", "workingDirectory": "backend" }
+        ]
+      }
+    ]
+  },
+  "frontend": {
+    "name": "frontend-app",
+    "location": "West US",
+    "runtime": "node",
+    "resources": [
+      {
+        "type": "appService",
+        "sku": "basic",
+        "name": "frontend-service",
+        "properties": {
+          "appSettings": [
+            { "name": "API_URL", "value": "http://backend-service/api" }
+          ]
+        },
+        "commands": [
+          { "command": "npm install", "workingDirectory": "frontend-haltoforest" },
+          { "command": "ng build --prod", "workingDirectory": "frontend-haltoforest" },
+          { "command": "ng serve -o", "workingDirectory": "frontend-haltoforest" }
+        ]
+      }
+    ]
+  }
+}
