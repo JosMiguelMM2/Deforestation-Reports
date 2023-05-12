@@ -52,7 +52,7 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
-        resolve(res.blog);
+        resolve(res.rows);
       });
     });
   }
@@ -64,7 +64,7 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
-        resolve(res.blog);
+        resolve(res.rows);
       });
     });
   }

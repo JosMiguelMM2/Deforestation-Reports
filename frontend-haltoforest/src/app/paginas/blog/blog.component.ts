@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
 
+  //lo que se muestra al cargar la pagina
+  ngOnInit(): void {
+    alert("hola")
+  }
 }
