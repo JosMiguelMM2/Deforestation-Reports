@@ -55,7 +55,26 @@ import { UserTypeService } from './app/services/user_type/user_type.service';
                 PhoneController,
                 ReportController,
                 UserTypeController],
-  providers: [AppService, UsersService, AmountsService, BlogssService, CityService, DeforestTypeService, DonationsService, EntityUserService, FrecuencyService, GenderService, GovernmentEntityService, GradeAffectationService, LocationsService, PaymentService, PhoneService, UserTypeService],
+
+
+  providers: [
+              AppService,
+              UsersService,
+              AmountsService,
+              BlogssService,
+              CityService,
+              DeforestTypeService,
+              DonationsService,
+              EntityUserService,
+              FrecuencyService,
+              GenderService,
+              GovernmentEntityService,
+              GradeAffectationService,
+              LocationsService,
+              PaymentService,
+              PhoneService,
+              UserTypeService],
+
   exports: [],
 })
 export class AppModule {}
