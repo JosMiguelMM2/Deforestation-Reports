@@ -7,7 +7,7 @@ import { BlogService } from '../../services/blogs/blog.service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
-  solu:any=[];
+  numblo:any=4;
   datos:any=[];
   constructor(private BlogService: BlogService){}
 
@@ -33,6 +33,10 @@ export class BlogComponent {
       arre[i][variableformat] = fechaFormateada;
     }
 
+  }
+
+  aumenBlogs(){
+    this.numblo=this.numblo+2;
   }
   //lo que siempre debe mostrar al cargar la pagina
   ngOnInit(): void {
