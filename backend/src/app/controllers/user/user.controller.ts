@@ -21,6 +21,7 @@ export class UserController {
   @Post('singup')
   singUp(@Body() payload: {FirstName: string, SecondName: string, FirstSurname: string, SecondSurname: string, email: string, password:string,
     idCity: number, idPhone: number, idGender: number, idUser_type: number }){
+      
     return this.usersService.signup(payload.FirstName, payload.SecondName, payload.FirstSurname, payload.SecondSurname, payload.email, payload.password,
       payload.idCity, payload.idPhone, payload.idGender, payload.idUser_type);
   }

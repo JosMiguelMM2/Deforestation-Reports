@@ -40,7 +40,7 @@
         "commands": [
           { "command": "npm install", "workingDirectory": "frontend-haltoforest" },
           { "command": "ng build --prod", "workingDirectory": "frontend-haltoforest" },
-          { "command": "ng serve -o", "workingDirectory": "frontend-haltoforest" }
+          { "command": "ng serve -port 8000", "workingDirectory": "frontend-haltoforest" }
         ]
       }
     ]

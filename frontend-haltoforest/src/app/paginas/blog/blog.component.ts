@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BlogService } from '../../services/blogs/blog.service';
 
 @Component({
   selector: 'app-blog',
@@ -6,9 +7,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent {
+  solu:any=[];
+  datos:any=[];
+  constructor(private BlogService: BlogService){}
 
-  //lo que se muestra al cargar la pagina
+  obtenerDatos() {
+    this.BlogService.getblogs().subscribe(
+      (datos) => {
+        this.datos = datos;
+        //this.formateoFecha();
+        this.modeloformateoFechaA( this.datos,'p_created_at');
+        this.modeloformateoFechaA( this.datos,'p_updated_at');
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+
+  modeloformateoFechaA( arre:any[],variableformat:string) {
+    for(let i=0;i<arre.length;i++) {
+      let fecha = arre[i][variableformat];
+      fecha = new Date(fecha);
+      let fechaFormateada = fecha.toLocaleDateString();
+      arre[i][variableformat] = fechaFormateada;
+    }
+
+  }
+  //lo que siempre debe mostrar al cargar la pagina
   ngOnInit(): void {
-    alert("hola")
+    this.obtenerDatos();
+
   }
 }

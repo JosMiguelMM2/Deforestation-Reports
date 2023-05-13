@@ -1,18 +1,14 @@
 <div class="container cont">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8" *ngFor="let post of this.datos">
       <div class="blog-post">
-        <h2 class="blog-post-title">Título del artículo</h2>
-        <p class="blog-post-meta">Fecha de publicación: 12 de mayo de 2023 por <a href="#">Autor del artículo</a></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor risus sit amet tortor pharetra, vitae faucibus mi pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin bibendum semper nisl, vitae fringilla lacus fermentum id. In ultrices lorem at lacinia. Quisque sodales viverra mauris, non eleifend lectus condimentum sit amet.</p>
-      </div>
+        <h2 class="blog-post-title">{{post.p_title}}</h2>
+        <p class="blog-post-meta">Fecha de publicación: {{post.p_created_at}} por <a href="#">{{post.p_iduser}}</a></p>
+        <p class="blog-post-meta">Fecha de actualización : {{post.p_updated_at}} y fue hecho por <a href="#">{{post.p_iduser}}</a></p>
 
-      <div class="blog-post">
-        <h2 class="blog-post-title">Título del artículo</h2>
-        <p class="blog-post-meta">Fecha de publicación: 10 de mayo de 2023 por <a href="#">Autor del artículo</a></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor risus sit amet tortor pharetra, vitae faucibus mi pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin bibendum semper nisl, vitae fringilla lacus fermentum id. In ultrices lorem at lacinia. Quisque sodales viverra mauris, non eleifend lectus condimentum sit amet.</p>
+        <p>{{post.p_content}}</p>
       </div>
-    </div>
+   </div>
 
     <div class="col-md-4">
       <div class="sidebar">

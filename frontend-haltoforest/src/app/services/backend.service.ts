@@ -8,9 +8,8 @@ export class BackendService {
 private  URLbackend = 'http://localhost:3000';
   constructor( private  http: HttpClient) { }
 
-  getData(): Observable<any> {
-    const peticion='http://localhost:3000';
-    return this.http.get(`http://localhost:3000/user/todos`);
+  getData():Observable<any> {
+    return this.http.get(`${this.URLbackend}/user/todos`);
   }
 }
 

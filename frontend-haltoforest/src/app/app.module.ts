@@ -1,7 +1,10 @@
+//librerias del sistema
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
+//Importacion de archivos locales
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './paginas/home/home.component';
@@ -38,7 +41,7 @@ import { BlogComponent } from './paginas/blog/blog.component';
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
