@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Inject, Injectable, Get, Post, Put, Patch, Delete } from '@nestjs/common';
 import { Client } from 'pg';
 
@@ -63,6 +64,23 @@ export class LocationsService {
           reject(err);
         }
         resolve(res);
+=======
+import {Inject, Injectable, Get} from '@nestjs/common';
+import { Client } from 'pg';
+@Injectable()
+export class LocationsService {
+  constructor(@Inject("PG") private location: Client ) {}
+
+
+  @Get()
+  mostrarlocation() {
+    return new Promise((resolve, reject) => {
+      this.location.query("SELECT *FROM  querylocation()", (err, res) => {
+        if (err) {
+          reject(err);
+        }
+        resolve(res.rows);
+>>>>>>> 043fcf11fc46b6a3b6228b880473bb5371126361
       });
     });
   }

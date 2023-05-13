@@ -10,6 +10,8 @@ const database = databaseConfig.database;
 const password = databaseConfig.password;
 const port = databaseConfig.port;
 
+
+
 export const conection=new Client({
   user: user,
   host: host,

@@ -1,6 +1,10 @@
+//librerias del sistema
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 
+//Importacion de archivos locales
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './paginas/home/home.component';
@@ -12,6 +16,7 @@ import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.compon
 import { MapasMapboxComponent } from './paginas/mapas-mapbox/mapas-mapbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { BlogComponent } from './paginas/blog/blog.component';
 
 
 @NgModule({
@@ -25,16 +30,18 @@ import { FooterComponent } from './componentes/footer/footer.component';
     MapasGoogleComponent,
     MapasMapboxComponent,
     FooterComponent,
-   
+    BlogComponent
+
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    
+
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

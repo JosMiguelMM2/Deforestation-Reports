@@ -52,7 +52,11 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
+<<<<<<< HEAD
         resolve(res);
+=======
+        resolve(res.rows);
+>>>>>>> 043fcf11fc46b6a3b6228b880473bb5371126361
       });
     });
   }
@@ -64,7 +68,11 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
+<<<<<<< HEAD
         resolve(res);
+=======
+        resolve(res.rows);
+>>>>>>> 043fcf11fc46b6a3b6228b880473bb5371126361
       });
     });
   }
