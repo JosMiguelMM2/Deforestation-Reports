@@ -52,11 +52,11 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
-        resolve(res.blog);
+        resolve(res);
       });
     });
   }
-
+//
   @Delete(':id')
   deleteblog(id: number) {
     return new Promise((resolve, reject) => {
@@ -64,7 +64,7 @@ export class BlogssService {
         if (err) {
           reject(err);
         }
-        resolve(res.blog);
+        resolve(res);
       });
     });
   }

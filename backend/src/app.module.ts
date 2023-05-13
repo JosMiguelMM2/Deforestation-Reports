@@ -33,6 +33,8 @@ import { LocationsService } from './app/services/locations/locations.service';
 import { PaymentService } from './app/services/payment/payment.service';
 import { PhoneService } from './app/services/phone/phone.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
+import { ReportService } from './app/services/report/report.service';
+
 
 
 @Module({
@@ -73,7 +75,8 @@ import { UserTypeService } from './app/services/user_type/user_type.service';
               LocationsService,
               PaymentService,
               PhoneService,
-              UserTypeService],
+              UserTypeService,
+              ReportService],
 
   exports: [],
 })

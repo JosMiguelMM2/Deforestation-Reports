@@ -40,7 +40,7 @@ export class AmountsService {
         if (err) {
           reject(err);
         }
-        resolve(res.amount);
+        resolve(res);
       });
     });
   }
@@ -52,7 +52,7 @@ export class AmountsService {
         if (err) {
           reject(err);
         }
-        resolve(res.amount);
+        resolve(res);
       });
     });
   }
@@ -64,7 +64,7 @@ export class AmountsService {
         if (err) {
           reject(err);
         }
-        resolve(res.amount);
+        resolve(res);
       });
     });
   }

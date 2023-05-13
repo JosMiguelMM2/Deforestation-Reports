@@ -2,17 +2,17 @@ import { Injectable,Inject, Get, Post, Put, Patch, Delete  } from '@nestjs/commo
 import { Client } from 'pg';
 
 @Injectable()
-export class FrecuencyService {
+export class ReportService {
 
   constructor(
-    @Inject("PG") private frecuency: Client
+    @Inject("PG") private report: Client
   ){
   }
 
   @Get()
-  getfrecuency(){
+  getreport(){
     return new Promise((resolve, reject) => {
-      this.frecuency.query("SELECT * FROM queryfrecuency()", (err, res) => {
+      this.report.query("SELECT * FROM queryreport()", (err, res) => {
         if(err) {
           reject(err);
         }
@@ -22,9 +22,9 @@ export class FrecuencyService {
   }
 
   @Get('id:')
-  getfrecuencybyid(id: number){
+  getreportbyid(id: number){
     return new Promise((resolve, reject) => {
-      this.frecuency.query("SELECT * FROM queryidfrecuency($1)", [id], (err, res) => {
+      this.report.query("SELECT * FROM queryidreport($1)", [id], (err, res) => {
         if(err){
           reject(err);
         }
@@ -34,9 +34,9 @@ export class FrecuencyService {
   }
 
   @Post()
-  createfrecuency(frcy: any) {
+  createreport(Report: any) {
     return new Promise((resolve, reject) => {
-      this.frecuency.query("SELECT insertfrecuency($1)", [frcy.Name], (err, res) => {
+      this.report.query("SELECT insertreport($1, $2, $3, $4, $5)", [Report.Report, Report.Datetime, Report.idDeforest, Report.idAffectation, Report.idCity], (err, res) => {
         if (err) {
           reject(err);
         }
@@ -46,9 +46,9 @@ export class FrecuencyService {
   }
 
   @Put(':id')
-  updatefrecuency(id: number, frcy: any) {
+  updatereport(id: number, Report: any) {
     return new Promise((resolve, reject) => {
-      this.frecuency.query("SELECT updatefrecuency($1, $2)", [id, frcy.Name], (err, res) => {
+      this.report.query("SELECT updatereport($1, $2, $3, $4, $5, $6)", [id, Report.Report, Report.Datetime, Report.idDeforest, Report.idAffectation, Report.idCity], (err, res) => {
         if (err) {
           reject(err);
         }
@@ -58,9 +58,9 @@ export class FrecuencyService {
   }
 //
   @Delete(':id')
-  deletefrecuency(id: number) {
+  deletereport(id: number) {
     return new Promise((resolve, reject) => {
-      this.frecuency.query("SELECT deletefrecuency($1)", [id], (err, res) => {
+      this.report.query("SELECT deletereport($1)", [id], (err, res) => {
         if (err) {
           reject(err);
         }
