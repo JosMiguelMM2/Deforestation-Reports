@@ -12,6 +12,10 @@ import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.compon
 import { MapasMapboxComponent } from './paginas/mapas-mapbox/mapas-mapbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { LoginComponent } from './Users/login/login.component';
+import { LoginUserComponent } from './Users/login-user/login-user.component';
+import { LoginSuperUserComponent } from './Users/login-super-user/login-super-user.component';
+import { SingUpComponent } from './Users/sing-up/sing-up.component';
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
     MapasGoogleComponent,
     MapasMapboxComponent,
     FooterComponent,
+    LoginComponent,
+    LoginUserComponent,
+    LoginSuperUserComponent,
+    SingUpComponent,
    
   ],
   imports: [
