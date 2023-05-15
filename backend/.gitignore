@@ -2,6 +2,7 @@
 /dist
 /node_modules
 .env
+pruebas.http
 
 # dotenv environment variable files
 .env

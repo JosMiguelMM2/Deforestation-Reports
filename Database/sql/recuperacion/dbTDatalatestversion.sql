@@ -17,6 +17,20 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
+-- Name: uuid-ossp; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
+
+
+--
 -- Name: deleteamount(integer); Type: FUNCTION; Schema: public; Owner: postgres
 --
 
@@ -2210,7 +2224,11 @@ CREATE TABLE public."User" (
     "idCity" integer,
     "idPhone" integer,
     "idGender" integer,
-    "idUser_type" integer
+    "idUser_type" integer,
+    activated boolean,
+    activation_token uuid,
+    reset_password_token uuid,
+    carated_om date
 );
 
 
@@ -2331,6 +2349,24 @@ ALTER TABLE public.locations_idlocations_seq OWNER TO postgres;
 
 ALTER SEQUENCE public.locations_idlocations_seq OWNED BY public.locations.idlocations;
 
+
+--
+-- Name: user; Type: TABLE; Schema: public; Owner: postgres
+--
+
+CREATE TABLE public."user" (
+    id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
+    name character varying NOT NULL,
+    email character varying NOT NULL,
+    password character varying NOT NULL,
+    active boolean DEFAULT false NOT NULL,
+    activation_token uuid NOT NULL,
+    reset_password_token uuid,
+    created_on timestamp without time zone DEFAULT now() NOT NULL
+);
+
+
+ALTER TABLE public."user" OWNER TO postgres;
 
 --
 -- Name: user_type; Type: TABLE; Schema: public; Owner: postgres
@@ -2798,37 +2834,37 @@ COPY public."Report" ("idReport", "Report", "Datetime", "idDeforest", "idAffecta
 -- Data for Name: User; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Second_surname", "Email", "Password", "idCity", "idPhone", "idGender", "idUser_type") FROM stdin;
-2	Row	Alexei	Jaime	Cringle	acringle1@simplemachines.org	urvrD72YA	9	8	1	1
-3	Hewet	Yankee	Vannozzii	Evelyn	yevelyn2@vk.com	8HFA4EwRAYA	20	28	2	3
-4	Irita	Taddeo	Gyford	Doone	tdoone3@photobucket.com	2TeQk2D	1	15	2	1
-5	Fields	Talbert	Trever	Blackborough	tblackborough4@bandcamp.com	CZxgETL	2	28	1	1
-6	Joyann	Melisenda	Mathonnet	Dunbleton	mdunbleton5@joomla.org	w87IfGrh0x	11	4	2	3
-7	Maddi	Amandie	Placidi	Ehrat	aehrat6@cbsnews.com	mjXXRsEC	7	1	1	1
-8	Flem	Earl	Frankland	Harroll	eharroll7@adobe.com	50sdGGCYC	28	9	1	3
-9	Kerry	Filberte	Glauber	Chooter	fchooter8@usgs.gov	z57wLUZ	11	18	1	1
-10	Jessie	Cathee	Bronger	Sadgrove	csadgrove9@shutterfly.com	Jgxm1A7FuUW	4	4	1	2
-11	Leena	Augie	Gillyett	Salzberg	asalzberga@sciencedirect.com	d8C2JVb	27	2	1	2
-12	Caressa	Caralie	Bynold	Readie	creadieb@google.com	b0KXU2h	10	20	2	2
-13	Kathryne	Rurik	Stannas	Vuitte	rvuittec@harvard.edu	6fb04vU7S	13	14	3	3
-14	Fionna	Christi	Gayther	Lapidus	clapidusd@webs.com	8eSiK0bAhew	23	20	1	2
-15	Bobine	Inge	Le Borgne	MacIlhagga	imacilhaggae@ycombinator.com	ycgFrk	13	8	1	3
-16	Kimberly	Robina	Horney	Powelee	rpoweleef@businessinsider.com	EvGeoL	30	29	3	2
-17	Samaria	Van	Cleminshaw	Highwood	vhighwoodg@google.fr	HIwOoRY9V	12	12	1	2
-18	Lisa	Sebastien	Catt	Noon	snoonh@acquirethisname.com	lVl6Y0hGT	7	2	3	1
-19	Skipp	Evered	Charlin	Lusher	elusheri@oracle.com	U3izUF0x	11	17	2	3
-20	Fran	Gladi	Bole	Jervois	gjervoisj@toplist.cz	KyRCUCTGWr	12	14	2	1
-21	Tait	Suzanna	Pietruszka	Torri	storrik@simplemachines.org	t4RObA5	21	24	3	2
-22	Sindee	Grier	Vase	Canham	gcanhaml@ustream.tv	237tkbG	13	12	2	3
-23	Steven	Belle	Rippon	Elegood	belegoodm@printfriendly.com	JqzUkD9zwrso	12	23	2	3
-24	Yasmeen	Martie	Fairbard	Hallgalley	mhallgalleyn@hugedomains.com	tncnKBAo37H	28	23	2	1
-25	Juline	Gale	Gretton	Bruin	gbruino@canalblog.com	H5o9IWlqUVIt	29	1	3	2
-26	Jorge	Rollin	Clubbe	Cejka	rcejkap@marriott.com	MiERVKkNxio	12	22	2	1
-27	Hort	Valeria	Borrell	Yitzowitz	vyitzowitzq@fema.gov	xRVzgJ	21	26	2	2
-28	Ariella	Camel	Masarrat	Parram	cparramr@arizona.edu	kzGQdIKRkv	13	12	3	1
-29	Lani	Sada	Jerger	Corton	scortons@twitpic.com	ETANuq	20	2	2	2
-30	Andres	Courtnay	Castelain	Borgars	cborgarst@quantcast.com	rzzCab	2	1	3	2
-1	camilo	andres	cardozo	blando	camilo@gmail.com	%&/-++%#	2	2	3	2
+COPY public."User" ("idUser", "First_Name", "Second_Name", "First_surname", "Second_surname", "Email", "Password", "idCity", "idPhone", "idGender", "idUser_type", activated, activation_token, reset_password_token, carated_om) FROM stdin;
+2	Row	Alexei	Jaime	Cringle	acringle1@simplemachines.org	urvrD72YA	9	8	1	1	\N	\N	\N	\N
+3	Hewet	Yankee	Vannozzii	Evelyn	yevelyn2@vk.com	8HFA4EwRAYA	20	28	2	3	\N	\N	\N	\N
+4	Irita	Taddeo	Gyford	Doone	tdoone3@photobucket.com	2TeQk2D	1	15	2	1	\N	\N	\N	\N
+5	Fields	Talbert	Trever	Blackborough	tblackborough4@bandcamp.com	CZxgETL	2	28	1	1	\N	\N	\N	\N
+6	Joyann	Melisenda	Mathonnet	Dunbleton	mdunbleton5@joomla.org	w87IfGrh0x	11	4	2	3	\N	\N	\N	\N
+7	Maddi	Amandie	Placidi	Ehrat	aehrat6@cbsnews.com	mjXXRsEC	7	1	1	1	\N	\N	\N	\N
+8	Flem	Earl	Frankland	Harroll	eharroll7@adobe.com	50sdGGCYC	28	9	1	3	\N	\N	\N	\N
+9	Kerry	Filberte	Glauber	Chooter	fchooter8@usgs.gov	z57wLUZ	11	18	1	1	\N	\N	\N	\N
+10	Jessie	Cathee	Bronger	Sadgrove	csadgrove9@shutterfly.com	Jgxm1A7FuUW	4	4	1	2	\N	\N	\N	\N
+11	Leena	Augie	Gillyett	Salzberg	asalzberga@sciencedirect.com	d8C2JVb	27	2	1	2	\N	\N	\N	\N
+12	Caressa	Caralie	Bynold	Readie	creadieb@google.com	b0KXU2h	10	20	2	2	\N	\N	\N	\N
+13	Kathryne	Rurik	Stannas	Vuitte	rvuittec@harvard.edu	6fb04vU7S	13	14	3	3	\N	\N	\N	\N
+14	Fionna	Christi	Gayther	Lapidus	clapidusd@webs.com	8eSiK0bAhew	23	20	1	2	\N	\N	\N	\N
+15	Bobine	Inge	Le Borgne	MacIlhagga	imacilhaggae@ycombinator.com	ycgFrk	13	8	1	3	\N	\N	\N	\N
+16	Kimberly	Robina	Horney	Powelee	rpoweleef@businessinsider.com	EvGeoL	30	29	3	2	\N	\N	\N	\N
+17	Samaria	Van	Cleminshaw	Highwood	vhighwoodg@google.fr	HIwOoRY9V	12	12	1	2	\N	\N	\N	\N
+18	Lisa	Sebastien	Catt	Noon	snoonh@acquirethisname.com	lVl6Y0hGT	7	2	3	1	\N	\N	\N	\N
+19	Skipp	Evered	Charlin	Lusher	elusheri@oracle.com	U3izUF0x	11	17	2	3	\N	\N	\N	\N
+20	Fran	Gladi	Bole	Jervois	gjervoisj@toplist.cz	KyRCUCTGWr	12	14	2	1	\N	\N	\N	\N
+21	Tait	Suzanna	Pietruszka	Torri	storrik@simplemachines.org	t4RObA5	21	24	3	2	\N	\N	\N	\N
+22	Sindee	Grier	Vase	Canham	gcanhaml@ustream.tv	237tkbG	13	12	2	3	\N	\N	\N	\N
+23	Steven	Belle	Rippon	Elegood	belegoodm@printfriendly.com	JqzUkD9zwrso	12	23	2	3	\N	\N	\N	\N
+24	Yasmeen	Martie	Fairbard	Hallgalley	mhallgalleyn@hugedomains.com	tncnKBAo37H	28	23	2	1	\N	\N	\N	\N
+25	Juline	Gale	Gretton	Bruin	gbruino@canalblog.com	H5o9IWlqUVIt	29	1	3	2	\N	\N	\N	\N
+26	Jorge	Rollin	Clubbe	Cejka	rcejkap@marriott.com	MiERVKkNxio	12	22	2	1	\N	\N	\N	\N
+27	Hort	Valeria	Borrell	Yitzowitz	vyitzowitzq@fema.gov	xRVzgJ	21	26	2	2	\N	\N	\N	\N
+28	Ariella	Camel	Masarrat	Parram	cparramr@arizona.edu	kzGQdIKRkv	13	12	3	1	\N	\N	\N	\N
+29	Lani	Sada	Jerger	Corton	scortons@twitpic.com	ETANuq	20	2	2	2	\N	\N	\N	\N
+30	Andres	Courtnay	Castelain	Borgars	cborgarst@quantcast.com	rzzCab	2	1	3	2	\N	\N	\N	\N
+1	camilo	andres	cardozo	blando	camilo@gmail.com	%&/-++%#	2	2	3	2	\N	\N	\N	\N
 \.
 
 
@@ -2894,6 +2930,14 @@ COPY public.locations (latitude, longitude, "nameLocation", "idReport", idlocati
 -9.29393180	-77.62425740	0 Del Mar Trail	14	16
 23.15604500	112.89660600	4 Mendota Lane	19	17
 -71.00000000	80.00000000	95 frankfurt	4	19
+\.
+
+
+--
+-- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public."user" (id, name, email, password, active, activation_token, reset_password_token, created_on) FROM stdin;
 \.
 
 
@@ -3086,6 +3130,14 @@ ALTER TABLE ONLY public."GradeAffectation"
 
 
 --
+-- Name: user PK_cace4a159ff9f2512dd42373760; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."user"
+    ADD CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY (id);
+
+
+--
 -- Name: Payment Payment_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3107,6 +3159,30 @@ ALTER TABLE ONLY public."Phone"
 
 ALTER TABLE ONLY public."Report"
     ADD CONSTRAINT "Report_pk" PRIMARY KEY ("idReport");
+
+
+--
+-- Name: user UQ_1f2c31911e3b5b4681fbc04971a; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."user"
+    ADD CONSTRAINT "UQ_1f2c31911e3b5b4681fbc04971a" UNIQUE (activation_token);
+
+
+--
+-- Name: user UQ_5b494fc54a2e3d122f17b393598; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."user"
+    ADD CONSTRAINT "UQ_5b494fc54a2e3d122f17b393598" UNIQUE (reset_password_token);
+
+
+--
+-- Name: user UQ_e12875dfb3b1d92d7d7c5377e22; Type: CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY public."user"
+    ADD CONSTRAINT "UQ_e12875dfb3b1d92d7d7c5377e22" UNIQUE (email);
 
 
 --

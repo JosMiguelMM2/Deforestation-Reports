@@ -21,6 +21,7 @@ import { LoginUserComponent } from './Users/login-user/login-user.component';
 import { LoginSuperUserComponent } from './Users/login-super-user/login-super-user.component';
 import { SingUpComponent } from './Users/sing-up/sing-up.component';
 import { BlogComponent } from './paginas/blog/blog.component';
+import { ApiMapsComponent } from './paginas/api-maps/api-maps.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BlogComponent } from './paginas/blog/blog.component';
     LoginUserComponent,
     LoginSuperUserComponent,
     SingUpComponent,
-    BlogComponent
+    BlogComponent,
+    ApiMapsComponent
   ],
   imports: [
     HttpClientModule,
