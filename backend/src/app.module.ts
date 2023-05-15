@@ -33,28 +33,43 @@ import { LocationsService } from './app/services/locations/locations.service';
 import { PaymentService } from './app/services/payment/payment.service';
 import { PhoneService } from './app/services/phone/phone.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './app/auth/auth.module';
+import config from './config/configuration'
 
 @Module({
-  imports: [SuperposgreModule],
+  imports: [
+    SuperposgreModule,
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: config().database.host,
+      port: config().database.port,
+      username: config().database.username,
+      password: config().database.password,
+      database: config().database.database,
+      entities: ['dist/**/*.entity.js'],
+      synchronize: true,
+    }),
+    AuthModule
+  ],
   controllers: [
-                AppController,
-                UserController,
-                AmountController,
-                BlogsController,
-                CityController,
-                DeforestTypeController,
-                DonationsController,
-                EntityUserController,
-                FrecuencyController,
-                GenderController,
-                GovernmentEntityController,
-                GradeAffectationController,
-                LocationsController,
-                PaymentController,
-                PhoneController,
-                ReportController,
-                UserTypeController],
+    AppController,
+    UserController,
+    AmountController,
+    BlogsController,
+    CityController,
+    DeforestTypeController,
+    DonationsController,
+    EntityUserController,
+    FrecuencyController,
+    GenderController,
+    GovernmentEntityController,
+    GradeAffectationController,
+    LocationsController,
+    PaymentController,
+    PhoneController,
+    ReportController,
+    UserTypeController],
   providers: [AppService, UsersService, AmountsService, BlogssService, CityService, DeforestTypeService, DonationsService, EntityUserService, FrecuencyService, GenderService, GovernmentEntityService, GradeAffectationService, LocationsService, PaymentService, PhoneService, UserTypeService],
   exports: [],
 })
