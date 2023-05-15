@@ -34,6 +34,7 @@ import { PaymentService } from './app/services/payment/payment.service';
 import { PhoneService } from './app/services/phone/phone.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
 import { ReportService } from './app/services/report/report.service';
+import { MapsService } from './app/services/maps/maps.service';
 
 
 
@@ -76,7 +77,8 @@ import { ReportService } from './app/services/report/report.service';
               PaymentService,
               PhoneService,
               UserTypeService,
-              ReportService],
+              ReportService,
+              MapsService],
 
   exports: [],
 })
