@@ -18,3 +18,5 @@ async function bootstrap() {
 }
 
 bootstrap();
+
+// Path: src\app.module.ts

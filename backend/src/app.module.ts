@@ -35,11 +35,26 @@ import { PhoneService } from './app/services/phone/phone.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
 import { ReportService } from './app/services/report/report.service';
 import { MapsService } from './app/services/maps/maps.service';
-
+import { TypeOrmModule } from '@nestjs/typeorm';
+import config  from './interfaces/config/configutation';
+import { AuthModule } from './app/auth/auth.module';
 
 
 @Module({
-  imports: [SuperposgreModule],
+  imports: [
+    SuperposgreModule,
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: config().database.host,
+      port: config().database.port,
+      username: config().database.username,
+      password: config().database.password,
+      database: config().database.database,
+      entities: ['dist/**/*.entity.js'],
+      synchronize: true,
+    }),
+    AuthModule
+  ],
   controllers: [
                 AppController,
                 UserController,
@@ -82,4 +97,4 @@ import { MapsService } from './app/services/maps/maps.service';
 
   exports: [],
 })
-export class AppModule {}
+export class AppModule { }
