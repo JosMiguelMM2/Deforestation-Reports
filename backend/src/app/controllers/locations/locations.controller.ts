@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Post, Put,Delete, ParseIntPipe, Body } from '@nestjs/common';
+import {Controller, Get, Param, Post, Put, Delete, ParseIntPipe, Body, NotFoundException} from '@nestjs/common';
 import { LocationsService } from '../../services/locations/locations.service';
 import { GoogleMapsService } from '../../services/google-maps/google-maps.service';
 
@@ -14,7 +14,11 @@ export class LocationsController {
 
   @Get(':id')
   getLocationsId(@Param('id',ParseIntPipe)id: number){
-    return this.locationService.getlocationsbyid(id);
+    const consulta =this.locationService.getlocationsbyid(id);
+    if (!consulta) {
+      throw new NotFoundException('Lugar no encontrado');
+    }
+    return consulta;
   }
   @Post()
   async createLocations(@Body() locationData: any) {

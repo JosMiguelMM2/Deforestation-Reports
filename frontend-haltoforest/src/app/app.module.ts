@@ -16,14 +16,12 @@ import { MapasGoogleComponent } from './paginas/mapas-google/mapas-google.compon
 import { MapasMapboxComponent } from './paginas/mapas-mapbox/mapas-mapbox.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
-<<<<<<< HEAD
 import { LoginComponent } from './Users/login/login.component';
 import { LoginUserComponent } from './Users/login-user/login-user.component';
 import { LoginSuperUserComponent } from './Users/login-super-user/login-super-user.component';
 import { SingUpComponent } from './Users/sing-up/sing-up.component';
-=======
 import { BlogComponent } from './paginas/blog/blog.component';
->>>>>>> d4d4e6da063ebac9cb8d1b6e30b4003ed26a819f
+import { ApiMapsComponent } from './paginas/api-maps/api-maps.component';
 
 
 @NgModule({
@@ -37,16 +35,12 @@ import { BlogComponent } from './paginas/blog/blog.component';
     MapasGoogleComponent,
     MapasMapboxComponent,
     FooterComponent,
-<<<<<<< HEAD
     LoginComponent,
     LoginUserComponent,
     LoginSuperUserComponent,
     SingUpComponent,
-   
-=======
-    BlogComponent
-
->>>>>>> d4d4e6da063ebac9cb8d1b6e30b4003ed26a819f
+    BlogComponent,
+    ApiMapsComponent
   ],
   imports: [
     HttpClientModule,
@@ -60,4 +54,3 @@ import { BlogComponent } from './paginas/blog/blog.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- SVGFETileElement
