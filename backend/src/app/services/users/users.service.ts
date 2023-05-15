@@ -3,9 +3,8 @@ import {Client} from "pg";
 
 @Injectable()
 export class UsersService {
-  constructor(
-    @Inject("PG") private userdb: Client //tipado de coeccion
-  ) {
+  constructor(@Inject("PG") private userdb: Client //tipado de coeccion
+   ) {
   }
 
   @Get()
