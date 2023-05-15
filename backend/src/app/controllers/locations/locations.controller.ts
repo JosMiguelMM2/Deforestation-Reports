@@ -1,10 +1,11 @@
 import { Controller, Get, Param, Post, Put,Delete, ParseIntPipe, Body } from '@nestjs/common';
 import { LocationsService } from '../../services/locations/locations.service';
+import { GoogleMapsService } from '../../services/google-maps/google-maps.service';
 
 @Controller('locations')
 export class LocationsController {
 
-  constructor(private locationService: LocationsService){}
+  constructor(private locationService: LocationsService, private googleMapsService: GoogleMapsService){}
 
   @Get()
   getLocations(){
@@ -16,8 +17,16 @@ export class LocationsController {
     return this.locationService.getlocationsbyid(id);
   }
   @Post()
-  createLocations(@Body() location: any){
-  return this.locationService.createlocations(location);
+  async createLocations(@Body() locationData: any) {
+    const { nameLocation, idReport } = locationData;
+
+    // Obtener la latitud y longitud desde el servicio de Google Maps
+    const { lat, lng } = await this.googleMapsService.getCoordinatesFromCurrentLocation();
+
+    // Guardar los datos en el servicio de ubicaciones
+    await this.locationService.saveLocation(lat, lng, nameLocation, idReport);
+
+    return 'Ubicación creada correctamente.';
   }
 
   @Put(':id')

@@ -32,9 +32,11 @@ import { GradeAffectationService } from './app/services/grade_affectation/grade_
 import { LocationsService } from './app/services/locations/locations.service';
 import { PaymentService } from './app/services/payment/payment.service';
 import { PhoneService } from './app/services/phone/phone.service';
+import { ReportService } from './app/services/report/report.service';
 import { UserTypeService } from './app/services/user_type/user_type.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './app/auth/auth.module';
+import { GoogleMapsService } from './app/services/google-maps/google-maps.service';
 import config from './config/configuration'
 
 @Module({
@@ -70,7 +72,25 @@ import config from './config/configuration'
     PhoneController,
     ReportController,
     UserTypeController],
-  providers: [AppService, UsersService, AmountsService, BlogssService, CityService, DeforestTypeService, DonationsService, EntityUserService, FrecuencyService, GenderService, GovernmentEntityService, GradeAffectationService, LocationsService, PaymentService, PhoneService, UserTypeService],
+  providers: [
+    AppService,
+    UsersService,
+    AmountsService,
+    BlogssService,
+    CityService,
+    DeforestTypeService,
+    DonationsService,
+    EntityUserService,
+    FrecuencyService,
+    GenderService,
+    GovernmentEntityService,
+    GradeAffectationService,
+    LocationsService,
+    PaymentService,
+    PhoneService,
+    UserTypeService,
+    ReportService,
+    GoogleMapsService],
   exports: [],
 })
 export class AppModule { }

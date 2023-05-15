@@ -8,7 +8,9 @@ export class LocationsService {
   constructor(
     @Inject("PG") private locations: Client
   ){
+    this.locations.connect();
   }
+
   @Get()
   getlocations() {
     return new Promise((resolve, reject) => {
@@ -32,15 +34,19 @@ export class LocationsService {
   });
 }
   @Post()
-  createlocations(location: any) {
-    return new Promise((resolve, reject) => {
-      this.locations.query("SELECT insertlocations($1, $2, $3, $4)", [location.latitude, location.longitude, location.nameLocation, location.idReport], (err, res) => {
-        if (err) {
-          reject(err);
-        }
-        resolve(res);
-      });
-    });
+
+  async saveLocation(latitude: number, longitude: number, nameLocation: string, idReport: number): Promise<void> {
+    const location = {
+      latitude,
+      longitude,
+    };
+    try{
+      const query = 'SELECT insertlocations($1, $2, $3, $4)';
+      const values = [location.latitude, location.longitude, nameLocation, idReport];
+      await this.locations.query(query, values);
+    } catch (error) {
+      throw new Error('Error al guardar la ubicación en la base de datos.');
+    }
   }
 
   @Put(':id')
