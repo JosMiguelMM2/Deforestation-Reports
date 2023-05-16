@@ -8,7 +8,7 @@ import {BlogComponent} from "./paginas/blog/blog.component";
 import { ApiMapsComponent } from './paginas/api-maps/api-maps.component';
 
 const routes: Routes = [
-
+//ojala
   {path:"",component:HomeComponent},
   {path: "login",component:LoginComponent},
   {path: "login-user",component: LoginUserComponent},
