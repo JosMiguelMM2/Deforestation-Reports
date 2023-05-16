@@ -25,7 +25,7 @@ export class LocationsService {
   @Get(':id')
   getlocationsbyid(id: number){
     return new Promise((resolve, reject) =>{
-      this.locations.query("SELECT * FROM queryidlocations($1)", [id], (err, res) => {
+      this.locations.query(`SELECT * FROM queryidlocations($1)`, [id], (err, res) => {
         if (err) {
           reject(err);
       }

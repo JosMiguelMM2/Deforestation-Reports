@@ -1,9 +1,10 @@
 import { Global, Module } from "@nestjs/common";
-import { Client } from "pg";
+import { Pool } from "pg";
 import * as process from "process";
 import config from "../../../interfaces/config/configutation";
 
 const databaseConfig = config().database;
+console.log(databaseConfig);
 const user = databaseConfig.username;
 const host = databaseConfig.host;
 const database = databaseConfig.database;
@@ -12,7 +13,7 @@ const port = databaseConfig.port;
 
 
 
-export const conection=new Client({
+export const conection=new Pool({
   user: user,
   host: host,
   database: database,
