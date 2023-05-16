@@ -1,4 +1,5 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+declare var google: any;
 @Component({
   selector: 'app-api-maps',
   templateUrl: './api-maps.component.html',
@@ -6,20 +7,30 @@ import {Component, ElementRef, OnInit} from '@angular/core';
 })
 
 export class ApiMapsComponent implements OnInit{
+  //@ViewChild('map_canvas', { static: false }) map_canvas!: ElementRef;
 
- //  constructor(private elementRef: ElementRef) {
- //  }
- //
- // crearMapa(){
- //   const mapElement = this.elementRef.nativeElement.querySelector('#map');
- //   const mapOptions: google.maps.MapOptions = {
- //     center: { lat: 40.7128, lng: -74.0060 }, // Coordenadas de ejemplo (Nueva York)
- //     zoom: 12,
- //   };
- //   const map = new google.maps.Map(mapElement, mapOptions);
- // }
+  constructor() { }
+  crearmapa(){
+    if (google ){
+      let myMap = new google.maps.Map(document.getElementById('map_canvas') as HTMLElement, {
+        center: {lat: 64.397, lng: 150.644},
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      console.log(myMap);
+    }
 
+
+     // var marker = new google.maps.Marker({
+     // position: {lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE},
+     //   map: myMap,
+     //   title: 'Hello World!'
+     // });
+  }
   ngOnInit(): void {
-    //this.crearMapa()
+  // this.crearmapa()
+  }
+  ngAfterViewInit(): void {
+    this.crearmapa();
   }
 }
