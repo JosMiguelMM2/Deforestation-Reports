@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h1>Reportes de Deforestación</h1>
+  <hr>
+  <div class="row" *ngFor="let valores of this.mostrar.splice(this.atras,this.adelante) ">
+    <div class="col-md-4 mb-4">
+      <h2>{{valores.p_report}}</h2>
+      <p>Nombre del reporte</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h2>{{valores.p_datetime}}</h2>
+      <p>Fecha generación </p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h2>{{valores.p_affectation}}</h2>
+      <p>Tipo de deforestación</p>
+    </div>
+    <div class="col-md-12 mb-4">
+      <h2>{{valores.p_description}}</h2>
+      <p>Descripción del contenido del reporte</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h2>{{valores.p_city}}</h2>
+      <p>Ciudad</p>
+    </div>
+    <div class="col-md-6 mb-4">
+      <h2>{{valores.p_addres}}</h2>
+      <p>Dirección del lugar</p>
+    </div>
+  </div>
+</div>

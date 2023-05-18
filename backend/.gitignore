@@ -10,6 +10,7 @@ pruebas.http
 .env.test.local
 .env.production.local
 .env.local
+Pruebas.http
 
 # Logs
 logs

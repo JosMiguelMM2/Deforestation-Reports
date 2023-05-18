@@ -35,6 +35,7 @@ import { LocationsComponent } from './Users/login-super-user/locations/locations
 import { PaymentComponent } from './Users/login-super-user/payment/payment.component';
 import { PhoneComponent } from './Users/login-super-user/phone/phone.component';
 import { UserBlogsComponent } from './Users/login-super-user/user-blogs/user-blogs.component';
+import { ReportesComponent } from './paginas/reportes/reportes.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +67,7 @@ import { UserBlogsComponent } from './Users/login-super-user/user-blogs/user-blo
     DonationsComponent,
     UserBlogsComponent,
     EntityUserComponent,
+    ReportesComponent,
   ],
   imports: [
     HttpClientModule,

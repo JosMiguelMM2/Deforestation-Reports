@@ -36,7 +36,7 @@ export class BlogComponent {
   }
 
   aumenBlogs(){
-    this.numblo=this.numblo+2;
+    this.numblo=this.numblo+3;
   }
   //lo que siempre debe mostrar al cargar la pagina
 

@@ -10,9 +10,11 @@
         "name": "backend-service",
         "properties": {
           "appSettings": [
-            { "name": "DB_HOST", "value": "database" },
-            { "name": "DB_USER", "value": "username" },
-            { "name": "DB_PASSWORD", "value": "password" }
+            {"name":"DB_HOST", "value": "servicio-postgres.postgres.database.azure.com" },
+            {"name":"DB_PORT","value":"5432"},
+            {"name":"DB_USER","value":"postgres"},
+            {"name":"DB_PASSWORD","value":"kiup-QUY.+*1094Rxsdp;uy"},
+            {"name":"DB_NAME","value":"proyect"}
           ]
         },
         "commands": [

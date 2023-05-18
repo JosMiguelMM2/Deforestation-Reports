@@ -13,7 +13,7 @@ export class ApiMapsComponent implements OnInit{
   crearmapa(){
     if (google ){
       let myMap = new google.maps.Map(document.getElementById('map_canvas') as HTMLElement, {
-        center: {lat: 64.397, lng: 150.644},
+        center: {lat: 8.56813930, lng: -70.35838790},
         zoom: 10,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
