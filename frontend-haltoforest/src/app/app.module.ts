@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //Importacion de archivos locales
 import { AppRoutingModule } from './app-routing.module';
@@ -36,6 +37,8 @@ import { PaymentComponent } from './Users/login-super-user/payment/payment.compo
 import { PhoneComponent } from './Users/login-super-user/phone/phone.component';
 import { UserBlogsComponent } from './Users/login-super-user/user-blogs/user-blogs.component';
 import { ReportesComponent } from './paginas/reportes/reportes.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -68,6 +71,7 @@ import { ReportesComponent } from './paginas/reportes/reportes.component';
     UserBlogsComponent,
     EntityUserComponent,
     ReportesComponent,
+    SpinnerComponent,
   ],
   imports: [
     HttpClientModule,
@@ -75,7 +79,12 @@ import { ReportesComponent } from './paginas/reportes/reportes.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true
+    })
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

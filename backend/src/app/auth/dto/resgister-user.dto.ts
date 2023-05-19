@@ -6,6 +6,30 @@ export class RegisterUserDto {
   name: string;
 
   @IsNotEmpty()
+  @IsString()
+  lastName: string;
+
+  @IsNotEmpty()
+  @IsString()
+  city: string;
+
+  @IsNotEmpty()
+  @IsString()
+  address: string;
+
+  @IsNotEmpty()
+  @IsString()
+  phone: string;
+
+  @IsNotEmpty()
+  @IsString()
+  gender: string;
+
+  // @IsNotEmpty()
+  // @IsString()
+  // userType: string;
+
+  @IsNotEmpty()
   @IsEmail()
   email: string;
 

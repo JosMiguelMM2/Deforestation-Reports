@@ -1,113 +1,71 @@
-<!-- Section: Design Block -->
-<section class="text-center">
-    <!-- Background image -->
-    <div class="p-5 bg-image" style="
-          background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
-          height: 300px;
-          "></div>
-    <!-- Background image -->
-  
-    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-          margin-top: -100px;
-          background: hsla(194, 77%, 83%, 0.8);
-          backdrop-filter: blur(30px);
-          ">
-      <div class="card-body py-5 px-md-5">
-  
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="fw-bold mb-5">Register</h2>
-            <form>
-              <!-- 2 column grid layout with text inputs for the first and last names -->
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example1" class="form-control" />
-                    <label class="form-label" for="form3Example1">Primer Nombre</label>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-                    <input type="text" id="form3Example2" class="form-control" />
-                    <label class="form-label" for="form3Example2">Segundo Nombre</label>
-                  </div>
-                </div>
-              </div>
-        <!--------------------------------------------------------------------->
-        <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="form-outline">
-                <input type="text" id="form3Example1" class="form-control" />
-                <label class="form-label" for="form3Example1">Primero Apellido</label>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="form-outline">
-                <input type="text" id="form3Example2" class="form-control" />
-                <label class="form-label" for="form3Example2">Segundo Apellido</label>
-              </div>
-            </div>
-          </div>
-        <!--------------------------------------------------------------------->
+<div class="wrapper">
+  <div class="body">
+    <!-- Logo image -->
+    <img class="logo" src="../../../assets/img/HALTOFOREST.png" alt="img login">
 
-        <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="form-outline">
-                <input type="text" id="form3Example1" class="form-control" />
-                <label class="form-label" for="form3Example1">Genero</label>
-              </div>
-            </div>
-          </div>
-  <!--------------------------------------------------------------------->
-  
-    <div class="row">
-        <div class="col-md-6 mb-4">
-          <div class="form-outline">
-            <input type="text" id="form3Example1" class="form-control" />
-            <label class="form-label" for="form3Example1">Numero telefonico</label>
-          </div>
-        </div>
-      </div>
-<!--------------------------------------------------------------------->
+    <!-- Heading -->
+    <h3>Registrar Usuario</h3>
 
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="form-control" />
-                <label class="form-label" for="form3Example3">Email </label>
-              </div>
-  
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Contraseña</label>
-              </div>
-  
-              
-              <!-- city input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control" />
-                <label class="form-label" for="form3Example4">Ciudad</label>
-              </div>
-              
-  
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                <label class="form-check-label" for="form2Example33">
-                  Suscríbete a nuestro boletín
-                </label>
-              </div>
-  
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block mb-4">
-                Registrarse
-              </button>
-  
-            
-            </form>
-          </div>
-        </div>
-      </div>
+    <!-- Name input -->
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" [(ngModel)]="name" class="form-control" placeholder="Ingrese nombre">
+      <label>Nombre</label>
     </div>
-  </section>
-  <!-- Section: Design Block -->
+
+    <!-- Last name input -->
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" [(ngModel)]="lastName" class="form-control" placeholder="Ingrese apellido">
+      <label>Apellido</label>
+    </div>
+
+    <!-- Email input -->
+    <div class="form-floating mb-3 mt-3">
+      <input type="text" [(ngModel)]="email" class="form-control" placeholder="Ingrese email">
+      <label>email</label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-floating mb-3">
+      <input type="password" [(ngModel)]="password" class="form-control" placeholder="Ingrese password">
+      <label>Password</label>
+    </div>
+
+    <!-- Confirm password input -->
+    <div class="form-floating mb-3">
+      <input type="password" [(ngModel)]="confirmPassword" class="form-control" placeholder="Ingrese password de nuevo">
+      <label>Repetir Password</label>
+    </div>
+
+    <!-- City input -->
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]="city" class="form-control" placeholder="Ingrese Ciudad">
+      <label>Ciudad</label>
+    </div>
+
+    <!-- Address input -->
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]="address" class="form-control" placeholder="Ingrese Direccion">
+      <label>Direccion</label>
+    </div>
+
+    <!-- Gender input -->
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]="gender" class="form-control" placeholder="Ingrese Genero">
+      <label>Gender</label>
+    </div>
+
+    <!-- Phone input -->
+    <div class="form-floating mb-3">
+      <input type="text" [(ngModel)]="phone" class="form-control" placeholder="Ingrese Telefono">
+      <label>Phone</label>
+    </div>
+
+    <!-- Accept button -->
+    <div class="d-grid gap-2 mb-3">
+      <button type="button" (click)="addUser()" class="btn btn-primary btn-lg">Aceptar</button>
+    </div>
+
+    <!-- Link to go back to login page -->
+    <a routerLink="/login">Volver</a>
+  </div>
+</div>

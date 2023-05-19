@@ -41,7 +41,6 @@ export class ReportesComponent {
     if (google ){
           let myMap = new google.maps.Map(slector, {
             center: {lat: this.filteredDatos[posicion].p_latitude, lng: this.filteredDatos[posicion].p_longitude},
-
             zoom: 10,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           });
