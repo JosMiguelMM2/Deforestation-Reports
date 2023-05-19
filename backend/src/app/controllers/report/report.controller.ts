@@ -11,6 +11,11 @@ export class ReportController {
     return this.reportService.getreport();
   }
 
+  @Get('localizacionreport')
+  getReportLocal(){
+    return this.reportService.getreportlocal();
+  }
+
   @Get(':id')
   getReportId(@Param('id',ParseIntPipe)id: number){
     return this.reportService.getreportbyid(id);

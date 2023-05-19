@@ -15,4 +15,31 @@ export class ReportesService {
   getreports():Observable<any> {
     return this.http.get(`${this.ulrr}/report`);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  getreportlocation():Observable<any>{
+    return this.http.get(`${this.ulrr}/report/localizacionreport`);
+  }
 }

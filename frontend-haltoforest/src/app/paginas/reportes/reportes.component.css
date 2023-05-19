@@ -1,0 +1,80 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333; /* Cambiar el color del título a un tono oscuro */
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #007bff; /* Cambiar el color del borde superior a un tono azul */
+  margin-bottom: 20px;
+}
+
+.row.color {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de los bloques de información */
+.row.color .col-md-4 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #007bff; /* Cambiar el color de los títulos a un tono azul */
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/*!* Estilos del mapa *!*/
+/*.mapa {*/
+/*  height: 400px;*/
+/*  background-color: #eee;*/
+/*  border-radius: 5px;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+#botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.anterior-btn,
+.siguiente-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.anterior-btn:hover,
+.siguiente-btn:hover {
+  background-color: #0062cc;
+}
+#map_canvas,#map_canvas_1,#map_canvas_2 {
+  height: 400px;
+  width: 100%;
+  margin-top: 3rem;
+}
+.color {
+  background: #84d391;
+  margin-top: 2rem;
+}

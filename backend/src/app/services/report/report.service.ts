@@ -21,6 +21,18 @@ export class ReportService {
     });
   }
 
+  @Get()
+  getreportlocal(){
+    return new Promise((resolve, reject) => {
+      this.report.query(`SELECT * FROM querylocationsreport()`, (err, res) => {
+        if(err) {
+          reject(err);
+        }
+        resolve(res.rows);
+      });
+    });
+  }
+
   @Get('id:')
   getreportbyid(id: number){
     return new Promise((resolve, reject) => {

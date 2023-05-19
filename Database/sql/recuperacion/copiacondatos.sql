@@ -2351,24 +2351,6 @@ ALTER SEQUENCE public.locations_idlocations_seq OWNED BY public.locations.idloca
 
 
 --
--- Name: user; Type: TABLE; Schema: public; Owner: postgres
---
-
-CREATE TABLE public."user" (
-    id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
-    name character varying NOT NULL,
-    email character varying NOT NULL,
-    password character varying NOT NULL,
-    active boolean DEFAULT false NOT NULL,
-    activation_token uuid NOT NULL,
-    reset_password_token uuid,
-    created_on timestamp without time zone DEFAULT now() NOT NULL
-);
-
-
-ALTER TABLE public."user" OWNER TO postgres;
-
---
 -- Name: user_type; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -2934,14 +2916,6 @@ COPY public.locations (latitude, longitude, "nameLocation", "idReport", idlocati
 
 
 --
--- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public."user" (id, name, email, password, active, activation_token, reset_password_token, created_on) FROM stdin;
-\.
-
-
---
 -- Data for Name: user_type; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -3130,14 +3104,6 @@ ALTER TABLE ONLY public."GradeAffectation"
 
 
 --
--- Name: user PK_cace4a159ff9f2512dd42373760; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."user"
-    ADD CONSTRAINT "PK_cace4a159ff9f2512dd42373760" PRIMARY KEY (id);
-
-
---
 -- Name: Payment Payment_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -3159,30 +3125,6 @@ ALTER TABLE ONLY public."Phone"
 
 ALTER TABLE ONLY public."Report"
     ADD CONSTRAINT "Report_pk" PRIMARY KEY ("idReport");
-
-
---
--- Name: user UQ_1f2c31911e3b5b4681fbc04971a; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."user"
-    ADD CONSTRAINT "UQ_1f2c31911e3b5b4681fbc04971a" UNIQUE (activation_token);
-
-
---
--- Name: user UQ_5b494fc54a2e3d122f17b393598; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."user"
-    ADD CONSTRAINT "UQ_5b494fc54a2e3d122f17b393598" UNIQUE (reset_password_token);
-
-
---
--- Name: user UQ_e12875dfb3b1d92d7d7c5377e22; Type: CONSTRAINT; Schema: public; Owner: postgres
---
-
-ALTER TABLE ONLY public."user"
-    ADD CONSTRAINT "UQ_e12875dfb3b1d92d7d7c5377e22" UNIQUE (email);
 
 
 --

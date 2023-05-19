@@ -1,7 +1,7 @@
-<div class="container mt-5">
+<div class="container mt-5 ">
   <h1>Reportes de Deforestación</h1>
   <hr>
-  <div class="row" *ngFor="let valores of this.mostrar.splice(this.atras,this.adelante) ">
+  <div class="row color" *ngFor="let valores of this.filteredDatos ">
     <div class="col-md-4 mb-4">
       <h2>{{valores.p_report}}</h2>
       <p>Nombre del reporte</p>
@@ -26,5 +26,30 @@
       <h2>{{valores.p_addres}}</h2>
       <p>Dirección del lugar</p>
     </div>
+
+    <div class="col-md-6 mb-4">
+      <h2>{{valores.p_namelocation}}</h2>
+      <p>Ubicación</p>
+    </div>
+
+
   </div>
+
+  <div id="map_canvas" >
+
+  </div>
+
+  <div id="map_canvas_1" >
+
+  </div>
+
+  <div id="map_canvas_2" >
+
+  </div>
+
+  <div id="botones">
+    <button class="anterior-btn" (click)="anteriores()">Anterior</button>
+    <button class="siguiente-btn" (click)="siguiente()">Siguiente</button>
+  </div>
+
 </div>
