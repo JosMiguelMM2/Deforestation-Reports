@@ -24,13 +24,13 @@ export class AuthService {
   ) { }
 
   async registerUser(registerUserDto: RegisterUserDto): Promise<void> {
-    const { name, email, password } = registerUserDto;
+    const { name, lastName, city, address, phone, gender, email, password } = registerUserDto;
     const activationToken = v4();
     const hashedPassword = await this.encoderService.encodePassword(password);
-    const user = this.userRepository.create({ name, email, password:hashedPassword, activationToken });
+    const user = this.userRepository.create({ name, lastName, city, address, phone, gender, email, password: hashedPassword, activationToken });
 
     try {
-    await this.userRepository.save(user);
+      await this.userRepository.save(user);
     } catch (error) {
       if (error.code === 'ERR_DUP_ENTRY') {
         throw new ConflictException('El email ya se encuentra registrado')
@@ -39,34 +39,34 @@ export class AuthService {
     }
   }
 
-  async findOneByEmail(email: string): Promise<User>{
+  async findOneByEmail(email: string): Promise<User> {
     const user = await this.userRepository.findOne({
       where: {
         email: email,
       },
     });
 
-    if(!user) {
+    if (!user) {
       throw new NotFoundException(`User with email ${email} not found`)
     }
 
     return user;
   }
 
-  async login(loginDto: LoginDto): Promise<{accessToken: string}> {
-    const {email, password} = loginDto;
+  async login(loginDto: LoginDto): Promise<{ accessToken: string }> {
+    const { email, password } = loginDto;
     const user: User = await this.findOneByEmail(email);
 
     if (await this.encoderService.checkPassword(password, user.password)) {
-      const payload: JwtPayload = {id: user.id, email};
+      const payload: JwtPayload = { id: user.id, email };
       const accessToken = await this.jwtService.sign(payload);
 
-      return {accessToken};
+      return { accessToken };
     }
     throw new UnauthorizedException('Usuario o contrasena es incorrecto');
   }
 
-  async findOneInactiveByIdAndActivationToken(id: string, code: string): Promise<User> {
+  async findOneInactiveByIdAndActivationToken(id: number, code: string): Promise<User> {
     const user = await this.userRepository.findOne({
       where: {
         id,
@@ -78,9 +78,9 @@ export class AuthService {
   }
 
   async findOneByResetToken(resetPasswordToken: string): Promise<User> {
-    const user: User = await this.userRepository.findOne({where: {resetPasswordToken}})
+    const user: User = await this.userRepository.findOne({ where: { resetPasswordToken } })
 
-    if(!user){
+    if (!user) {
       throw new NotFoundException();
     }
 
@@ -99,7 +99,7 @@ export class AuthService {
     await this.userRepository.save(user);
   }
 
-  async requestResetPassword(requestResetPasswordDto: RequestResetPasswordDto): Promise<void>{
+  async requestResetPassword(requestResetPasswordDto: RequestResetPasswordDto): Promise<void> {
     const { email } = requestResetPasswordDto;
     const user: User = await this.findOneByEmail(email);
     user.resetPasswordToken = v4();
@@ -107,8 +107,8 @@ export class AuthService {
     // Evento de email con MailerModule
   }
 
-  async resetPassword(resetPasswordDto: ResetPasswordDto): Promise<void>{
-    const {resetPasswordToken, password} = resetPasswordDto;
+  async resetPassword(resetPasswordDto: ResetPasswordDto): Promise<void> {
+    const { resetPasswordToken, password } = resetPasswordDto;
     const user: User = await this.findOneByResetToken(resetPasswordToken);
 
     user.password = await this.encoderService.encodePassword(password);
@@ -116,9 +116,9 @@ export class AuthService {
     this.userRepository.save(user);
   }
 
-  async changePassword(changePasswordDto: ChangePasswordDto, user:User): Promise<void>{
-    const {oldPassword, newPassword} = changePasswordDto;
-    if(await this.encoderService.checkPassword(oldPassword, user.password)){
+  async changePassword(changePasswordDto: ChangePasswordDto, user: User): Promise<void> {
+    const { oldPassword, newPassword } = changePasswordDto;
+    if (await this.encoderService.checkPassword(oldPassword, user.password)) {
       user.password = await this.encoderService.encodePassword(newPassword);
       this.userRepository.save(user);
     } else {

@@ -8,7 +8,7 @@ async function bootstrap() {
 
   // TODO: Agregar direccion del front al cors
   app.enableCors({
-    origin: 'http://localhost:8000',
+    origin: 'http://localhost:4200',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
   });
