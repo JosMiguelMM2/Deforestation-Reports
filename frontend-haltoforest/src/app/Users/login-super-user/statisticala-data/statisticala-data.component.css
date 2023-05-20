@@ -1,0 +1,64 @@
+.image-list {
+    list-style: none;
+  }
+  
+  .image-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: perspective(500px) rotateY(90deg) rotateX(0deg);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+ 
+ 
+  
+  .image-list img {
+    width: 300px;
+  }
+  
+  .image-list p {
+    margin-top: 10px;
+  }
+  .image-list img {
+    width: 700px;
+  }
+  
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate-in {
+    0% {
+      transform: perspective(500px) rotateY(90deg) rotateX(0deg);
+    }
+    100% {
+      transform: perspective(500px) rotateY(0deg) rotateX(0deg);
+    }
+  }
+  
+  .image-list li:nth-child(1) {
+    animation: fade-in 0.5s ease-in-out forwards, rotate-in 0.5s ease-in-out forwards;
+  }
+  
+  .image-list li:nth-child(2) {
+    animation: fade-in 0.5s ease-in-out 0.5s forwards, rotate-in 0.5s ease-in-out 0.5s forwards;
+  }
+  
+  .image-list li:nth-child(3) {
+    animation: fade-in 0.5s ease-in-out 1s forwards, rotate-in 0.5s ease-in-out 1s forwards;
+  }
+  
+  .image-list li:nth-child(4) {
+    animation: fade-in 0.5s ease-in-out 1s forwards, rotate-in 0.5s ease-in-out 1s forwards;
+  }
+  
